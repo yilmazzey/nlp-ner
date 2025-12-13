@@ -1,0 +1,56 @@
+# API Configuration
+huggingface:
+  token: ""  # Set your HuggingFace API token here
+
+openai:
+  api_key: ""  # Set your OpenAI API key here
+  models:
+    - "gpt-4o"
+    - "gpt-4o-mini"
+
+google_ai:
+  api_key: ""  # Set your Google AI API key here
+  models:
+    - "gemini-1.5-flash"
+
+ollama:
+  base_url: "http://localhost:11434"  # Default Ollama URL
+  models:
+    - "llama3.1:8b-instruct"
+    - "mistral:7b-instruct-v0.3"
+
+# Dataset Configuration
+dataset:
+  name: "conll2003"
+  split: "validation"
+  num_sentences: 140
+  entity_types:
+    - "PER"
+    - "ORG"
+    - "LOC"
+    - "MISC"
+
+# Prompt Configuration
+prompts:
+  few_shot_examples: 3  # Number of examples for few-shot prompting
+
+# Paths
+paths:
+  data_dir: "data"
+  results_dir: "results"
+  dataset2_dir: "dataset2"
+  scraping_dir: "scraping"
+
+# Web Scraping Configuration
+scraping:
+  urls:
+    - "https://www.bbc.com/news"
+    - "https://www.hurriyet.com.tr"
+  num_paragraphs: 70
+  output_file: "dataset2/raw_news.json"
+
+# Evaluation Configuration
+evaluation:
+  entity_level: true
+  calculate_per_type: true
+
