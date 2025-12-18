@@ -7,7 +7,8 @@ This project evaluates Named Entity Recognition (NER) performance using prompt e
 - **4 LLMs**: GPT-4o/GPT-4o-mini (OpenAI), Gemini 1.5 Flash (Google), Llama-3.1-8B-Instruct (Ollama), Mistral-7B-Instruct-v0.3 (Ollama)
 - **3 Prompt Styles**: Zero-shot, 3-shot Few-shot, Chain-of-Thought
 - **12 Combinations**: All model × prompt combinations evaluated
-- **Dataset**: 140 sentences from conll2003 validation split
+- **Core Dataset**: 250 sentences sampled from the OntoNotes5 NER corpus via `tner/ontonotes5`
+- **Target NER Classes**: Person, Location, Organization, Time, Currency
 - **Web Scraping**: 70+ news paragraphs from BBC/Hurriyet
 
 ## Setup
@@ -51,14 +52,14 @@ python run_pipeline.py --step annotate  # Only annotation (requires comparison_t
 
 ### Manual Usage
 
-#### 1. Load and Evaluate on conll2003
+#### 1. Load and Evaluate on OntoNotes5 Subset
 
 ```python
-from src.data_loader import load_conll2003
+from src.data_loader import load_project_dataset
 from src.comparison import run_comparison
 
-# Load 140 sentences from validation split
-data = load_conll2003(num_sentences=140)
+# Load 250 sentences from OntoNotes5 subset
+data = load_project_dataset(num_examples=250)
 
 # Run all 12 combinations and generate comparison table
 run_comparison(data, output_path="results/comparison_table.csv")
@@ -93,7 +94,7 @@ ner_nlp/
 ├── dataset2/
 │   └── final_annotated.json     # Required submission file
 ├── src/
-│   ├── data_loader.py           # Load conll2003 dataset
+│   ├── data_loader.py           # Load OntoNotes5 (tner/ontonotes5) subset
 │   ├── prompts.py               # Prompt templates
 │   ├── openai_client.py         # OpenAI API client
 │   ├── gemini_client.py         # Google Gemini API client
@@ -111,9 +112,26 @@ ner_nlp/
 ## Results
 
 The comparison table (`results/comparison_table.csv`) contains F1 scores for:
-- Each entity type (PER, ORG, LOC, MISC)
+- Each entity type (Person, Location, Organization, Time, Currency)
 - Overall F1 score
 - All 12 model × prompt combinations
+
+## Dataset Details and Citation
+
+The core NER dataset used in this project is a 250-example subset of **OntoNotes5**, accessed via the Hugging Face dataset `tner/ontonotes5`.  
+We map the rich OntoNotes label space onto five target classes:
+
+- **Person**
+- **Location**
+- **Organization**
+- **Time**
+- **Currency**
+
+For more details about OntoNotes, see:
+
+> Hovy, Eduard, Mitchell Marcus, Martha Palmer, Lance Ramshaw, and Ralph Weischedel. 2006.  
+> “OntoNotes: The 90% Solution.” In *Proceedings of the Human Language Technology Conference of the NAACL, Companion Volume: Short Papers*, 57–60, New York City, USA. Association for Computational Linguistics.  
+> [https://aclanthology.org/N06-2015](https://aclanthology.org/N06-2015)
 
 ## Notes
 

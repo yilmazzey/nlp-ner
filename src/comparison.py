@@ -3,11 +3,13 @@ Run comparison across all 12 combinations (4 LLMs × 3 prompt styles)
 and generate comparison_table.csv with F1 scores.
 """
 
+import os
+
 import pandas as pd
 import yaml
-import os
 from tqdm import tqdm
-from .data_loader import load_conll2003, get_few_shot_examples
+
+from .data_loader import load_project_dataset, get_few_shot_examples
 from .predictor import predict
 from .evaluator import calculate_metrics
 
@@ -22,11 +24,11 @@ def load_config():
 def run_comparison(data=None, output_path="results/comparison_table.csv"):
     """
     Run all 12 combinations and generate comparison table.
-    
+
     Args:
-        data (list, optional): List of sentence dictionaries. If None, loads from conll2003.
+        data (list, optional): List of sentence dictionaries. If None, loads project dataset (OntoNotes5 subset).
         output_path (str): Path to save comparison table CSV
-    
+
     Returns:
         pd.DataFrame: Comparison table with F1 scores
     """
@@ -35,7 +37,7 @@ def run_comparison(data=None, output_path="results/comparison_table.csv"):
     # Load data if not provided
     if data is None:
         num_sentences = config['dataset']['num_sentences']
-        data = load_conll2003(num_sentences=num_sentences)
+        data = load_project_dataset(num_examples=num_sentences)
     
     # Define all combinations
     models = []
@@ -102,24 +104,30 @@ def run_comparison(data=None, output_path="results/comparison_table.csv"):
                         tokens_list.append(tokens)
                         true_labels.append(true_labs)
                 
-                # Calculate metrics
+                # Calculate metrics (5-class schema)
                 metrics = calculate_metrics(true_labels, predictions, tokens_list)
-                
+
                 # Store results
                 result = {
                     'Model': model_name,
                     'Prompt_Type': prompt_type,
-                    'F1_PER': metrics['F1_PER'],
-                    'F1_ORG': metrics['F1_ORG'],
-                    'F1_LOC': metrics['F1_LOC'],
-                    'F1_MISC': metrics['F1_MISC'],
-                    'F1_Overall': metrics['F1_Overall']
+                    'F1_PERSON': metrics.get('F1_PERSON', 0.0),
+                    'F1_ORGANIZATION': metrics.get('F1_ORGANIZATION', 0.0),
+                    'F1_LOCATION': metrics.get('F1_LOCATION', 0.0),
+                    'F1_TIME': metrics.get('F1_TIME', 0.0),
+                    'F1_CURRENCY': metrics.get('F1_CURRENCY', 0.0),
+                    'F1_Overall': metrics['F1_Overall'],
                 }
                 results.append(result)
                 
                 print(f"  F1_Overall: {metrics['F1_Overall']:.4f}")
-                print(f"  F1_PER: {metrics['F1_PER']:.4f}, F1_ORG: {metrics['F1_ORG']:.4f}, "
-                      f"F1_LOC: {metrics['F1_LOC']:.4f}, F1_MISC: {metrics['F1_MISC']:.4f}")
+                print(
+                    f"  F1_PERSON: {metrics.get('F1_PERSON', 0.0):.4f}, "
+                    f"F1_ORGANIZATION: {metrics.get('F1_ORGANIZATION', 0.0):.4f}, "
+                    f"F1_LOCATION: {metrics.get('F1_LOCATION', 0.0):.4f}, "
+                    f"F1_TIME: {metrics.get('F1_TIME', 0.0):.4f}, "
+                    f"F1_CURRENCY: {metrics.get('F1_CURRENCY', 0.0):.4f}"
+                )
             
             except Exception as e:
                 print(f"  Error with {model_name} - {prompt_type}: {e}")
@@ -127,11 +135,12 @@ def run_comparison(data=None, output_path="results/comparison_table.csv"):
                 result = {
                     'Model': model_name,
                     'Prompt_Type': prompt_type,
-                    'F1_PER': 0.0,
-                    'F1_ORG': 0.0,
-                    'F1_LOC': 0.0,
-                    'F1_MISC': 0.0,
-                    'F1_Overall': 0.0
+                    'F1_PERSON': 0.0,
+                    'F1_ORGANIZATION': 0.0,
+                    'F1_LOCATION': 0.0,
+                    'F1_TIME': 0.0,
+                    'F1_CURRENCY': 0.0,
+                    'F1_Overall': 0.0,
                 }
                 results.append(result)
     

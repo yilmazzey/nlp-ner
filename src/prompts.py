@@ -16,17 +16,19 @@ def create_zero_shot_prompt(sentence):
     """
     prompt = f"""You are a Named Entity Recognition (NER) expert. Your task is to identify and label all named entities in the following sentence.
 
-Entity types to identify:
-- PER (Person): Names of people
-- ORG (Organization): Names of companies, institutions, etc.
-- LOC (Location): Names of places, cities, countries, etc.
-- MISC (Miscellaneous): Other named entities
+Entity types to identify (project schema):
+- PERSON: Names of people
+- ORGANIZATION: Names of companies, institutions, teams, etc.
+- LOCATION: Names of places, cities, countries, regions, etc.
+- TIME: Dates and temporal expressions
+- CURRENCY: Monetary expressions
 
 Use BIO tagging scheme:
-- B-PER, I-PER for persons
-- B-ORG, I-ORG for organizations
-- B-LOC, I-LOC for locations
-- B-MISC, I-MISC for miscellaneous entities
+- B-PERSON, I-PERSON for persons
+- B-ORGANIZATION, I-ORGANIZATION for organizations
+- B-LOCATION, I-LOCATION for locations
+- B-TIME, I-TIME for temporal expressions
+- B-CURRENCY, I-CURRENCY for monetary expressions
 - O for non-entity tokens
 
 Sentence: {sentence}
@@ -50,17 +52,19 @@ def create_few_shot_prompt(sentence, examples):
     """
     prompt = """You are a Named Entity Recognition (NER) expert. Your task is to identify and label all named entities in sentences.
 
-Entity types to identify:
-- PER (Person): Names of people
-- ORG (Organization): Names of companies, institutions, etc.
-- LOC (Location): Names of places, cities, countries, etc.
-- MISC (Miscellaneous): Other named entities
+Entity types to identify (project schema):
+- PERSON: Names of people
+- ORGANIZATION: Names of companies, institutions, teams, etc.
+- LOCATION: Names of places, cities, countries, regions, etc.
+- TIME: Dates and temporal expressions
+- CURRENCY: Monetary expressions
 
 Use BIO tagging scheme:
-- B-PER, I-PER for persons
-- B-ORG, I-ORG for organizations
-- B-LOC, I-LOC for locations
-- B-MISC, I-MISC for miscellaneous entities
+- B-PERSON, I-PERSON for persons
+- B-ORGANIZATION, I-ORGANIZATION for organizations
+- B-LOCATION, I-LOCATION for locations
+- B-TIME, I-TIME for temporal expressions
+- B-CURRENCY, I-CURRENCY for monetary expressions
 - O for non-entity tokens
 
 Here are some examples:
@@ -99,27 +103,30 @@ def create_chain_of_thought_prompt(sentence):
     """
     prompt = f"""You are a Named Entity Recognition (NER) expert. Your task is to identify and label all named entities in the following sentence using a step-by-step reasoning process.
 
-Entity types to identify:
-- PER (Person): Names of people
-- ORG (Organization): Names of companies, institutions, etc.
-- LOC (Location): Names of places, cities, countries, etc.
-- MISC (Miscellaneous): Other named entities
+Entity types to identify (project schema):
+- PERSON: Names of people
+- ORGANIZATION: Names of companies, institutions, teams, etc.
+- LOCATION: Names of places, cities, countries, regions, etc.
+- TIME: Dates and temporal expressions
+- CURRENCY: Monetary expressions
 
 Use BIO tagging scheme:
-- B-PER, I-PER for persons
-- B-ORG, I-ORG for organizations
-- B-LOC, I-LOC for locations
-- B-MISC, I-MISC for miscellaneous entities
+- B-PERSON, I-PERSON for persons
+- B-ORGANIZATION, I-ORGANIZATION for organizations
+- B-LOCATION, I-LOCATION for locations
+- B-TIME, I-TIME for temporal expressions
+- B-CURRENCY, I-CURRENCY for monetary expressions
 - O for non-entity tokens
 
 Sentence: {sentence}
 
 Follow these steps:
-1. First, identify all person names (PER entities) in the sentence
-2. Then, identify all organization names (ORG entities)
-3. Next, identify all location names (LOC entities)
-4. Finally, identify any miscellaneous named entities (MISC)
-5. For each token, assign the appropriate BIO label based on your findings
+1. First, identify all person names (PERSON entities) in the sentence.
+2. Then, identify all organization names (ORGANIZATION entities).
+3. Next, identify all location names (LOCATION entities).
+4. Then, identify all temporal expressions (TIME entities).
+5. Finally, identify all monetary expressions (CURRENCY entities).
+6. For each token, assign the appropriate BIO label based on your findings.
 
 After your reasoning, output only the labels separated by spaces, in the same order as the tokens appear in the sentence.
 
@@ -176,9 +183,9 @@ if __name__ == "__main__":
     # Test few-shot with dummy examples
     examples = [
         {
-            'text': "John Smith works at Microsoft.",
-            'tokens': ["John", "Smith", "works", "at", "Microsoft", "."],
-            'labels': ["B-PER", "I-PER", "O", "O", "B-ORG", "O"]
+            'text': "John Smith works at Microsoft in 2014.",
+            'tokens': ["John", "Smith", "works", "at", "Microsoft", "in", "2014", "."],
+            'labels': ["B-PERSON", "I-PERSON", "O", "O", "B-ORGANIZATION", "O", "B-TIME", "O"]
         }
     ]
     print("Few-shot prompt:")

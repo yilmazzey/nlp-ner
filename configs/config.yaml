@@ -21,14 +21,15 @@ ollama:
 
 # Dataset Configuration
 dataset:
-  name: "conll2003"
-  split: "validation"
-  num_sentences: 140
+  name: "tner/ontonotes5"
+  split: "train"
+  num_sentences: 250
   entity_types:
-    - "PER"
-    - "ORG"
-    - "LOC"
-    - "MISC"
+    - "PERSON"
+    - "LOCATION"
+    - "ORGANIZATION"
+    - "TIME"
+    - "CURRENCY"
 
 # Prompt Configuration
 prompts:

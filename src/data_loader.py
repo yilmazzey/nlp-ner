@@ -1,207 +1,182 @@
 """
-Data loader for conll2003 dataset from HuggingFace.
-Extracts sentences and BIO labels for NER evaluation.
+Data loader for OntoNotes5 (tner/ontonotes5) from HuggingFace.
+Extracts sentences and BIO labels for NER evaluation in 5 classes:
+Person, Location, Organization, Time, Currency.
 """
 
-import yaml
 import os
-from typing import List, Dict
-from huggingface_hub import login, hf_hub_download
-import datasets
+from typing import List, Dict, Tuple
+
+import yaml
+from datasets import load_dataset
 
 
 def load_config():
     """Load configuration from config.yaml"""
-    config_path = os.path.join(os.path.dirname(__file__), '..', 'configs', 'config.yaml')
-    with open(config_path, 'r') as f:
+    config_path = os.path.join(os.path.dirname(__file__), "..", "configs", "config.yaml")
+    with open(config_path, "r") as f:
         return yaml.safe_load(f)
 
 
-def load_conll2003(num_sentences=140, split='validation', use_cache=True):
+# OntoNotes5 raw label groups mapped to project classes
+ONTO2PROJECT = {
+    # Person
+    "PERSON": "PERSON",
+    # Organization-like
+    "ORG": "ORGANIZATION",
+    "NORP": "ORGANIZATION",  # nationalities, religious, political groups
+    # Location-like
+    "GPE": "LOCATION",  # geopolitical entity
+    "LOC": "LOCATION",
+    "FAC": "LOCATION",  # facilities, treated as locations
+    # Time
+    "DATE": "TIME",
+    "TIME": "TIME",
+    # Currency / Money
+    "MONEY": "CURRENCY",
+}
+
+PROJECT_ENTITY_TYPES = ["PERSON", "LOCATION", "ORGANIZATION", "TIME", "CURRENCY"]
+
+
+def map_ontonotes_label(raw_label: str) -> str:
     """
-    Load conll2003 dataset and extract sentences with BIO labels.
-    
-    Args:
-        num_sentences (int): Number of sentences to extract (default: 140)
-        split (str): Dataset split to use (default: 'validation')
-        hf_token (str, optional): HuggingFace API token
-    
+    Map OntoNotes-style label (e.g., B-PERSON, I-ORG, O) to project label.
+
     Returns:
-        list: List of dictionaries with 'tokens', 'labels', and 'text' keys
+        str: Mapped BIO label with project class names or 'O'.
     """
-    print(f"Loading conll2003 dataset ({split} split)...")
-    
-    # Check for cached dataset
-    if use_cache:
-        cache_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
-        cache_file = os.path.join(cache_dir, f'conll2003_{split}_{num_sentences}.json')
-        if os.path.exists(cache_file):
-            try:
-                import json
-                print(f"Loading from cache: {cache_file}")
-                with open(cache_file, 'r', encoding='utf-8') as f:
-                    sentences = json.load(f)
-                print(f"Loaded {len(sentences)} sentences from cache")
-                return sentences
-            except Exception as e:
-                print(f"Warning: Could not load from cache: {e}")
-    
-    # Get token from config
+    if raw_label == "O":
+        return "O"
+
+    if "-" not in raw_label:
+        return "O"
+
+    prefix, ent = raw_label.split("-", 1)
+    mapped = ONTO2PROJECT.get(ent)
+    if mapped is None:
+        return "O"
+
+    if prefix not in {"B", "I"}:
+        return "O"
+
+    return f"{prefix}-{mapped}"
+
+
+def load_ontonotes5_subset(num_examples: int = 250, split: str = "train") -> List[Dict]:
+    """
+    Load OntoNotes5 subset from tner/ontonotes5 and map labels to 5 project classes.
+
+    Args:
+        num_examples (int): Number of sentences to sample.
+        split (str): Dataset split to use (train/validation/test).
+
+    Returns:
+        list: List of dicts with 'tokens', 'labels', 'text'.
+    """
+    print(f"Loading OntoNotes5 dataset (tner/ontonotes5, split={split})...")
+    ds = load_dataset("tner/ontonotes5", split=split)
+
+    # Figure out which feature holds the tag IDs (usually "tags")
+    tag_field_name = None
+    for cand in ("tags", "ner_tags", "labels"):
+        if cand in ds.features:
+            tag_field_name = cand
+            break
+    if tag_field_name is None:
+        raise KeyError("Could not find tag field ('tags' / 'ner_tags' / 'labels') in OntoNotes5 dataset")
+
+    tag_feature = ds.features[tag_field_name].feature  # often ClassLabel, but not always
+
+    # Some datasets expose ClassLabel with .names, others already store string tags.
+    label_names = None
+    if hasattr(tag_feature, "names"):
+        label_names = tag_feature.names
+
+    sentences: List[Dict] = []
+
+    for example in ds:
+        tokens = example.get("tokens") or example.get("words")
+        tag_values = example.get(tag_field_name)
+
+        if tokens is None or tag_values is None:
+            continue
+
+        # Convert to raw string labels only (no project mapping here).
+        # We'll do careful mapping to PERSON/LOCATION/ORG/TIME/CURRENCY later in the pipeline.
+        if label_names is not None:
+            # tag_values are integer IDs → map via ClassLabel names
+            raw_labels = [label_names[i] for i in tag_values]
+        else:
+            # tag_values are already strings
+            raw_labels = [str(v) for v in tag_values]
+
+        # Build text
+        text = " ".join(tokens)
+
+        sentences.append(
+            {
+                "tokens": tokens,
+                "labels": raw_labels,  # keep original OntoNotes labels
+                "text": text,
+            }
+        )
+
+        if len(sentences) >= num_examples:
+            break
+
+    print(f"Loaded {len(sentences)} sentences from OntoNotes5 subset")
+
+    # Cache to disk
+    cache_dir = os.path.join(os.path.dirname(__file__), "..", "data")
+    os.makedirs(cache_dir, exist_ok=True)
+    # Store raw OntoNotes labels (no project mapping yet)
+    cache_file = os.path.join(cache_dir, f"ontonotes5_raw_ner_{num_examples}.json")
+
     try:
-        config = load_config()
-        hf_token = config.get('huggingface', {}).get('token')
-    except:
-        hf_token = None
-    
-    # Login to HuggingFace if token provided
-    if hf_token:
-        try:
-            login(token=hf_token)
-            print("Authenticated with HuggingFace")
-        except Exception as e:
-            print(f"Warning: Could not authenticate with HuggingFace: {e}")
-    
-    try:
-        # Try using datasets library with authentication
-        from datasets import load_dataset
-        
-        # Map split names
-        split_map = {
-            'validation': 'validation',
-            'train': 'train',
-            'test': 'test'
-        }
-        dataset_split = split_map.get(split, 'validation')
-        
-        # Load dataset - try different methods
-        try:
-            # Method 1: Try loading directly (may work with auth)
-            dataset = load_dataset("conll2003", split=dataset_split, token=hf_token)
-        except:
-            # Method 2: Try loading from parquet format
-            try:
-                dataset = load_dataset("tner/conll2003", split=dataset_split, token=hf_token)
-            except:
-                # Method 3: Use nltk as fallback
-                import nltk
-                try:
-                    nltk.download('conll2002', quiet=True)
-                    from nltk.corpus import conll2002
-                    # This won't work for conll2003, but shows the pattern
-                    raise ImportError("Need alternative method")
-                except:
-                    raise RuntimeError("Could not load conll2003 dataset")
-        
-        # Extract sentences and labels
-        sentences = []
-        label_map = {0: 'O', 1: 'B-PER', 2: 'I-PER', 3: 'B-ORG', 4: 'I-ORG',
-                     5: 'B-LOC', 6: 'I-LOC', 7: 'B-MISC', 8: 'I-MISC'}
-        
-        for example in dataset:
-            tokens = example['tokens']
-            ner_tags = example['ner_tags']
-            
-            # Convert tag IDs to BIO labels
-            labels = [label_map.get(tag, 'O') for tag in ner_tags]
-            
-            # Create sentence text
-            text = ' '.join(tokens)
-            
-            sentences.append({
-                'tokens': tokens,
-                'labels': labels,
-                'text': text
-            })
-            
-            if len(sentences) >= num_sentences:
-                break
-        
-        print(f"Loaded {len(sentences)} sentences from conll2003 {split} split")
-        return sentences
-    
+        import json
+
+        with open(cache_file, "w", encoding="utf-8") as f:
+            json.dump(sentences, f, indent=2, ensure_ascii=False)
+        print(f"Cached OntoNotes5 subset to {cache_file}")
     except Exception as e:
-        # Fallback: Download and parse manually
-        print(f"Warning: Standard load failed ({e}), trying manual download...")
-        import requests
-        
-        split_files = {
-            'train': 'eng.train',
-            'validation': 'eng.testa',
-            'test': 'eng.testb'
-        }
-        
-        filename = split_files.get(split, 'eng.testa')
-        url = f"https://raw.githubusercontent.com/synalp/NER/master/corpus/CoNLL-2003/{filename}"
-        
+        print(f"Warning: could not cache OntoNotes5 subset: {e}")
+
+    return sentences
+
+
+def load_project_dataset(num_examples: int = 250, split: str = "train") -> List[Dict]:
+    """
+    Public entry point for loading the project NER dataset.
+    Currently uses OntoNotes5 subset (tner/ontonotes5).
+    """
+    # Try to load from cache first
+    cache_dir = os.path.join(os.path.dirname(__file__), "..", "data")
+    cache_file = os.path.join(cache_dir, f"ontonotes5_raw_ner_{num_examples}.json")
+
+    if os.path.exists(cache_file):
         try:
-            response = requests.get(url, timeout=30)
-            response.raise_for_status()
-            
-            # Parse manually
-            sentences = []
-            current_tokens = []
-            current_labels = []
-            
-            for line in response.text.split('\n'):
-                line = line.strip()
-                if not line:
-                    if current_tokens:
-                        sentences.append({
-                            'tokens': current_tokens,
-                            'labels': current_labels,
-                            'text': ' '.join(current_tokens)
-                        })
-                        current_tokens = []
-                        current_labels = []
-                        if len(sentences) >= num_sentences:
-                            break
-                elif not line.startswith('-DOCSTART-'):
-                    parts = line.split()
-                    if len(parts) >= 4:
-                        token = parts[0]
-                        # NER tag is the 4th column (index 3)
-                        ner_tag_str = parts[3]
-                        # Convert string tag to label (already in BIO format)
-                        current_tokens.append(token)
-                        current_labels.append(ner_tag_str)
-            
-            if current_tokens and len(sentences) < num_sentences:
-                sentences.append({
-                    'tokens': current_tokens,
-                    'labels': current_labels,
-                    'text': ' '.join(current_tokens)
-                })
-            
-            sentences = sentences[:num_sentences]
-            print(f"Loaded {len(sentences)} sentences from conll2003 {split} split (manual download)")
-            
-            # Optionally save to disk for future use
-            cache_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
-            os.makedirs(cache_dir, exist_ok=True)
-            cache_file = os.path.join(cache_dir, f'conll2003_{split}_{num_sentences}.json')
-            
-            try:
-                import json
-                with open(cache_file, 'w', encoding='utf-8') as f:
-                    json.dump(sentences, f, indent=2, ensure_ascii=False)
-                print(f"Dataset cached to: {cache_file}")
-            except Exception as cache_error:
-                print(f"Warning: Could not cache dataset: {cache_error}")
-            
-            return sentences
-            
-        except Exception as e2:
-            raise RuntimeError(f"Failed to load conll2003 dataset: {e2}")
+            import json
+
+            print(f"Loading project dataset from cache: {cache_file}")
+            with open(cache_file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            print(f"Loaded {len(data)} sentences from cache")
+            return data
+        except Exception as e:
+            print(f"Warning: could not load cached dataset: {e}")
+
+    return load_ontonotes5_subset(num_examples=num_examples, split=split)
 
 
-def get_few_shot_examples(data, num_examples=3):
+def get_few_shot_examples(data: List[Dict], num_examples: int = 3) -> List[Dict]:
     """
     Get few-shot examples from the dataset.
-    
+
     Args:
         data (list): List of sentence dictionaries
         num_examples (int): Number of examples to return
-    
+
     Returns:
         list: List of example dictionaries
     """
@@ -209,14 +184,10 @@ def get_few_shot_examples(data, num_examples=3):
 
 
 if __name__ == "__main__":
-    # Test the data loader
-    config = load_config()
-    num_sentences = config['dataset']['num_sentences']
-    
-    data = load_conll2003(num_sentences=num_sentences)
-    
-    print(f"\nFirst sentence example:")
-    print(f"Text: {data[0]['text']}")
-    print(f"Tokens: {data[0]['tokens'][:10]}...")
-    print(f"Labels: {data[0]['labels'][:10]}...")
+    # Simple manual test
+    subset = load_ontonotes5_subset(num_examples=5, split="train")
+    print("\nFirst example:")
+    print("Text:", subset[0]["text"])
+    print("Tokens:", subset[0]["tokens"])
+    print("Labels:", subset[0]["labels"])
 

@@ -4,11 +4,13 @@ Annotate Dataset2 (scraped news paragraphs) using the best model+prompt combinat
 
 import json
 import os
+
 import yaml
 from tqdm import tqdm
+
 from .comparison import get_best_model_prompt
 from .predictor import predict
-from .data_loader import get_few_shot_examples, load_conll2003
+from .data_loader import get_few_shot_examples, load_project_dataset
 
 
 def load_config():
@@ -56,10 +58,10 @@ def annotate_dataset2(input_path="dataset2/raw_news.json",
     # Get few-shot examples if needed
     few_shot_examples = None
     if best_prompt_type == 'few_shot':
-        # Load examples from conll2003
+        # Load examples from project dataset (OntoNotes5 subset)
         num_few_shot = config.get('prompts', {}).get('few_shot_examples', 3)
-        conll_data = load_conll2003(num_sentences=num_few_shot)
-        few_shot_examples = get_few_shot_examples(conll_data, num_examples=num_few_shot)
+        project_data = load_project_dataset(num_examples=num_few_shot)
+        few_shot_examples = get_few_shot_examples(project_data, num_examples=num_few_shot)
     
     # Annotate each paragraph
     annotated_data = []

@@ -2,17 +2,20 @@
 
 ## Overview
 
-This guide explains how to use the annotation pipeline to evaluate NER performance across 4 LLMs and 3 prompt styles.
+This guide explains how to use the annotation pipeline to evaluate NER performance across 4 LLMs and 3 prompt styles on a 250-example subset of OntoNotes5.
 
-## Step 1: Extract Raw Texts
+## Step 1: Prepare Dataset
 
-Extract raw text fields from the dataset:
+The core dataset is loaded via `src.data_loader.load_project_dataset`, which builds (and caches) a 250-example OntoNotes5 subset:
 
-```bash
-python extract_raw_texts.py
+```python
+from src.data_loader import load_project_dataset
+
+data = load_project_dataset(num_examples=250)
+print(len(data))
 ```
 
-This creates `data/raw_texts.json` containing just the text strings (140 sentences).
+This creates (and reuses) `data/ontonotes5_ner_250.json`.
 
 ## Step 2: Run Annotation Pipeline
 
@@ -23,10 +26,10 @@ python annotate_dataset.py
 ```
 
 This will:
-1. Load raw texts and gold labels
+1. Load gold labels from the OntoNotes5 subset (250 examples)
 2. For each of 4 LLMs × 3 prompt styles = 12 combinations:
    - Generate predictions using the LLM
-   - Calculate F1-scores per entity type (PER, ORG, LOC, MISC)
+   - Calculate F1-scores per entity type (Person, Location, Organization, Time, Currency)
    - Calculate overall F1-score
 3. Save results to:
    - `results/all_predictions.json` - All predictions
@@ -37,7 +40,7 @@ This will:
 The comparison table (`results/comparison_table.csv`) contains:
 - Model name
 - Prompt type (zero_shot, few_shot, chain_of_thought)
-- F1 scores for each entity type (PER, ORG, LOC, MISC)
+- F1 scores for each entity type (Person, Location, Organization, Time, Currency)
 - Overall F1 score
 
 ## Models and Prompts
@@ -56,7 +59,7 @@ The comparison table (`results/comparison_table.csv`) contains:
 ## Evaluation Metrics
 
 The evaluator calculates:
-- **F1-score per entity type**: PER, ORG, LOC, MISC
+- **F1-score per entity type**: Person, Location, Organization, Time, Currency
 - **Overall F1-score**: Micro-averaged across all entity types
 - **Entity-level matching**: Compares entities (not just tokens) for accuracy
 
@@ -72,9 +75,8 @@ Before running, ensure:
    ollama pull llama3.1:8b-instruct
    ollama pull mistral:7b-instruct-v0.3
    ```
-3. Dataset files exist:
-   - `data/conll2003_validation_140.json`
-   - `data/raw_texts.json`
+3. Dataset files exist (generated on first run):
+   - `data/ontonotes5_ner_250.json`
 
 ## Output Format
 
@@ -85,7 +87,7 @@ Before running, ensure:
     "model": "gpt-4o",
     "prompt_type": "zero_shot",
     "predictions": [
-      ["B-PER", "I-PER", "O", "B-LOC", ...],
+      ["B-PERSON", "I-PERSON", "O", "B-LOCATION", ...],
       ...
     ]
   },
@@ -95,8 +97,8 @@ Before running, ensure:
 
 ### Comparison CSV
 ```csv
-Model,Prompt_Type,F1_PER,F1_ORG,F1_LOC,F1_MISC,F1_Overall
-gpt-4o,zero_shot,0.85,0.78,0.82,0.71,0.79
+Model,Prompt_Type,F1_PERSON,F1_ORGANIZATION,F1_LOCATION,F1_TIME,F1_CURRENCY,F1_Overall
+gpt-4o,zero_shot,0.85,0.78,0.82,0.71,0.60,0.79
 ...
 ```
 

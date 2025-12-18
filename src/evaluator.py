@@ -55,22 +55,23 @@ def extract_entities(tokens: List[str], labels: List[str]) -> List[Tuple[str, in
     return entities
 
 
-def calculate_metrics(true_labels: List[List[str]], pred_labels: List[List[str]], 
+def calculate_metrics(true_labels: List[List[str]], pred_labels: List[List[str]],
                       tokens_list: List[List[str]], entity_types: List[str] = None) -> Dict:
     """
     Calculate precision, recall, and F1-score per entity type and overall.
-    
+
     Args:
         true_labels (list): List of true label lists
         pred_labels (list): List of predicted label lists
         tokens_list (list): List of token lists
-        entity_types (list, optional): List of entity types to evaluate. Defaults to ['PER', 'ORG', 'LOC', 'MISC'].
-    
+        entity_types (list, optional): List of entity types to evaluate.
+            Defaults to ['PERSON', 'LOCATION', 'ORGANIZATION', 'TIME', 'CURRENCY'].
+
     Returns:
         dict: Dictionary with metrics per entity type and overall
     """
     if entity_types is None:
-        entity_types = ['PER', 'ORG', 'LOC', 'MISC']
+        entity_types = ['PERSON', 'LOCATION', 'ORGANIZATION', 'TIME', 'CURRENCY']
     
     # Extract entities for each sentence
     true_entities_all = []

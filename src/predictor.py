@@ -108,9 +108,9 @@ def parse_labels_from_response(response: str, tokens: List[str]) -> List[str]:
         # Try to extract from the entire response
         label_line = response.strip()
     
-    # Extract labels (B-PER, I-PER, O, etc.)
-    # Match BIO labels or O
-    label_pattern = r'\b(B|I)-(PER|ORG|LOC|MISC)\b|\bO\b'
+    # Extract labels (e.g., B-PERSON, I-LOCATION, O, etc.)
+    # Match BIO labels for project classes or O
+    label_pattern = r'\b(B|I)-(PERSON|ORGANIZATION|LOCATION|TIME|CURRENCY)\b|\bO\b'
     found_labels = re.findall(label_pattern, label_line)
     
     # Convert tuples to label strings

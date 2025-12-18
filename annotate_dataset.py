@@ -1,33 +1,21 @@
 #!/usr/bin/env python3
 """
-Annotate raw texts using all 4 LLMs and 3 prompt styles.
-This script processes the raw texts and generates predictions for evaluation.
+Annotate OntoNotes5 subset using all 4 LLMs and 3 prompt styles.
+This script processes the project dataset and generates predictions for evaluation.
 """
 
 import json
 import os
 import sys
+
 from tqdm import tqdm
 
 # Add src to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
 
-from src.data_loader import load_conll2003, get_few_shot_examples
+from src.data_loader import load_project_dataset, get_few_shot_examples
 from src.predictor import predict
 from src.evaluator import calculate_metrics
-
-
-def load_raw_texts(input_file='data/raw_texts.json'):
-    """Load raw texts from JSON file."""
-    with open(input_file, 'r', encoding='utf-8') as f:
-        return json.load(f)
-
-
-def load_gold_labels(input_file='data/conll2003_validation_140.json'):
-    """Load gold labels from dataset JSON."""
-    with open(input_file, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    return data
 
 
 def annotate_with_llm(texts, model_name, prompt_type, few_shot_examples=None, progress=True):
@@ -68,17 +56,16 @@ def run_annotation_pipeline():
     print("NER Annotation Pipeline")
     print("=" * 60)
     
-    # Load data
+    # Load data (OntoNotes5 subset)
     print("\n1. Loading data...")
-    raw_texts = load_raw_texts('data/raw_texts.json')
-    gold_data = load_gold_labels('data/conll2003_validation_140.json')
-    
-    print(f"   ✓ Loaded {len(raw_texts)} raw texts")
-    print(f"   ✓ Loaded {len(gold_data)} gold label examples")
-    
+    gold_data = load_project_dataset(num_examples=250)
+    raw_texts = [item["text"] for item in gold_data]
+
+    print(f"   ✓ Loaded {len(raw_texts)} texts with gold labels")
+
     # Prepare gold labels and tokens
-    gold_labels = [item['labels'] for item in gold_data]
-    gold_tokens = [item['tokens'] for item in gold_data]
+    gold_labels = [item["labels"] for item in gold_data]
+    gold_tokens = [item["tokens"] for item in gold_data]
     
     # Get few-shot examples
     print("\n2. Preparing few-shot examples...")
@@ -142,37 +129,43 @@ def run_annotation_pipeline():
                 
                 # Calculate metrics
                 metrics = calculate_metrics(
-                    gold_labels, 
-                    predictions, 
-                    gold_tokens
+                    gold_labels,
+                    predictions,
+                    gold_tokens,
                 )
-                
+
                 # Store results
                 all_results[combo_key] = {
-                    'model': model_name,
-                    'prompt_type': prompt_type,
-                    'predictions': predictions,
-                    'metrics': metrics
+                    "model": model_name,
+                    "prompt_type": prompt_type,
+                    "predictions": predictions,
+                    "metrics": metrics,
                 }
-                
+
                 print(f"   ✓ F1 Overall: {metrics['F1_Overall']:.4f}")
-                print(f"     F1_PER: {metrics['F1_PER']:.4f}, F1_ORG: {metrics['F1_ORG']:.4f}")
-                print(f"     F1_LOC: {metrics['F1_LOC']:.4f}, F1_MISC: {metrics['F1_MISC']:.4f}")
+                print(
+                    f"     F1_PERSON: {metrics.get('F1_PERSON', 0.0):.4f}, "
+                    f"F1_ORGANIZATION: {metrics.get('F1_ORGANIZATION', 0.0):.4f}, "
+                    f"F1_LOCATION: {metrics.get('F1_LOCATION', 0.0):.4f}, "
+                    f"F1_TIME: {metrics.get('F1_TIME', 0.0):.4f}, "
+                    f"F1_CURRENCY: {metrics.get('F1_CURRENCY', 0.0):.4f}"
+                )
                 
             except Exception as e:
                 print(f"   ✗ Error: {e}")
                 # Store error result
                 all_results[combo_key] = {
-                    'model': model_name,
-                    'prompt_type': prompt_type,
-                    'error': str(e),
-                    'metrics': {
-                        'F1_Overall': 0.0,
-                        'F1_PER': 0.0,
-                        'F1_ORG': 0.0,
-                        'F1_LOC': 0.0,
-                        'F1_MISC': 0.0
-                    }
+                    "model": model_name,
+                    "prompt_type": prompt_type,
+                    "error": str(e),
+                    "metrics": {
+                        "F1_Overall": 0.0,
+                        "F1_PERSON": 0.0,
+                        "F1_ORGANIZATION": 0.0,
+                        "F1_LOCATION": 0.0,
+                        "F1_TIME": 0.0,
+                        "F1_CURRENCY": 0.0,
+                    },
                 }
     
     # Save results
@@ -181,7 +174,7 @@ def run_annotation_pipeline():
     os.makedirs(results_dir, exist_ok=True)
     
     # Save full predictions
-    predictions_file = os.path.join(results_dir, 'all_predictions.json')
+    predictions_file = os.path.join(results_dir, "all_predictions.json")
     predictions_data = {
         combo: {
             'model': info['model'],
@@ -196,26 +189,28 @@ def run_annotation_pipeline():
     
     # Save metrics summary
     import pandas as pd
+
     metrics_data = []
     for combo, info in all_results.items():
-        metrics = info.get('metrics', {})
+        metrics = info.get("metrics", {})
         metrics_data.append({
-            'Model': info['model'],
-            'Prompt_Type': info['prompt_type'],
-            'F1_PER': metrics.get('F1_PER', 0.0),
-            'F1_ORG': metrics.get('F1_ORG', 0.0),
-            'F1_LOC': metrics.get('F1_LOC', 0.0),
-            'F1_MISC': metrics.get('F1_MISC', 0.0),
-            'F1_Overall': metrics.get('F1_Overall', 0.0)
+            "Model": info["model"],
+            "Prompt_Type": info["prompt_type"],
+            "F1_PERSON": metrics.get("F1_PERSON", 0.0),
+            "F1_ORGANIZATION": metrics.get("F1_ORGANIZATION", 0.0),
+            "F1_LOCATION": metrics.get("F1_LOCATION", 0.0),
+            "F1_TIME": metrics.get("F1_TIME", 0.0),
+            "F1_CURRENCY": metrics.get("F1_CURRENCY", 0.0),
+            "F1_Overall": metrics.get("F1_Overall", 0.0),
         })
     
     df = pd.DataFrame(metrics_data)
-    comparison_file = os.path.join(results_dir, 'comparison_table.csv')
+    comparison_file = os.path.join(results_dir, "comparison_table.csv")
     df.to_csv(comparison_file, index=False)
     print(f"   ✓ Saved comparison table to {comparison_file}")
     
     # Find best combination
-    best_idx = df['F1_Overall'].idxmax()
+    best_idx = df["F1_Overall"].idxmax()
     best_row = df.loc[best_idx]
     print(f"\n5. Best combination:")
     print(f"   Model: {best_row['Model']}")
