@@ -1,0 +1,1413 @@
+{
+  "metadata": {
+    "total_samples": 140,
+    "sources": {
+      "Vice": 70,
+      "Fox News": 70
+    },
+    "selection_date": "2025-12-20T00:35:32.079756",
+    "selection_strategy": "Stratified sampling by length, article diversity, and entity richness"
+  },
+  "samples": [
+    {
+      "text": "However, given the state of Ohio’s conservative leanings over the past decade, this man is likely to be the next governor.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/no-showing-job-interviews-could-soon-land-you-on-a-public-shame-list/",
+      "title": "No-Showing Job Interviews Could Soon Land You on a Public Shame List",
+      "category": "politics",
+      "char_count": 122,
+      "word_count": 21,
+      "entity_score": 1
+    },
+    {
+      "text": "In a Washington Post op-ed, Tim Cunningham, board president of Clowns Without Borders, understands why you want to call Donald Trump a clown. But he would rather you didn’t.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/stop-calling-donald-trump-a-clown-beg-actual-clowns/",
+      "title": "Stop Calling Donald Trump a Clown, Beg Actual Clowns",
+      "category": "politics",
+      "char_count": 173,
+      "word_count": 29,
+      "entity_score": 2
+    },
+    {
+      "text": "“[Keir] Starmer personifies this middle manager bureaucrat, the HR type that everyone hates.”",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/british-class-system-today-expert/",
+      "title": "How Does the British Class System Work Today? We Asked an Expert",
+      "category": "politics",
+      "char_count": 93,
+      "word_count": 13,
+      "entity_score": 0
+    },
+    {
+      "text": "More power to you, Trump. By this point, his body has gotta be comprised of 75% Diet Coke flowing through him.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trumps-diet-coke-button-is-back-in-the-oval-office/",
+      "title": "Donald Trump’s Diet Coke Button Is Back in the Oval Office",
+      "category": "politics",
+      "char_count": 110,
+      "word_count": 21,
+      "entity_score": 0
+    },
+    {
+      "text": "The World Health Organization has yet to comment on Monday’s order.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trump-announces-us-withdrawal-from-world-health-organization/",
+      "title": "Donald Trump Announces US Withdrawal From World Health Organization",
+      "category": "politics",
+      "char_count": 67,
+      "word_count": 11,
+      "entity_score": 2
+    },
+    {
+      "text": "If a personalized video from a has-been MAGA politician is on your holiday wishlist, boy have we got some good news for you.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/matt-gaetz-is-charging-500-for-pep-talks-on-cameo/",
+      "title": "Matt Gaetz Is Charging $500 for Pep Talks on Cameo",
+      "category": "politics",
+      "char_count": 124,
+      "word_count": 23,
+      "entity_score": 0
+    },
+    {
+      "text": "The Rainbow Youth Project, The Trevor Project, and the LGBT National Hotline are among the organizations fielding more calls than usual.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/lgbtq-crisis-hotline-calls-us-presidential-election/",
+      "title": "LGBTQ Crisis Hotline Calls Spiked 700% After US Presidential Election",
+      "category": "politics",
+      "char_count": 136,
+      "word_count": 21,
+      "entity_score": 1
+    },
+    {
+      "text": "It’s a beautiful gesture when you put it in human terms. But for polar bears, adoption comes with serious risks. Raising cubs in the Arctic is a demanding job, and sometimes a deadly one.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/wild-polar-bear-photographed-with-rare-adopted-cub/",
+      "title": "Wild Polar Bear Photographed With Rare ‘Adopted’ Cub",
+      "category": "politics",
+      "char_count": 187,
+      "word_count": 34,
+      "entity_score": 1
+    },
+    {
+      "text": "A Santa Clara County family is suing two South Bay mortuaries and a licensed funeral director after an alleged mistake—a horrifying, disgusting mistake.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/funeral-home-accused-of-giving-a-father-his-sons-brain-in-a-bag/",
+      "title": "Funeral Home Accused of Giving a Father His Son’s Brain in a Bag",
+      "category": "politics",
+      "char_count": 152,
+      "word_count": 23,
+      "entity_score": 0
+    },
+    {
+      "text": "Trying to instill healthier digital habits in a family is a good and just lesson to impart, just as long as you can stand all the yelling that will ensue.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/this-is-the-most-common-argument-kids-have-with-their-parents/",
+      "title": "This Is the Most Common Argument Kids Have With Their Parents",
+      "category": "politics",
+      "char_count": 154,
+      "word_count": 30,
+      "entity_score": 0
+    },
+    {
+      "text": "Researchers are scanning other islands to see if Bermuda is unique or if it’s actually one of several landmasses with gargantuan slabs of out-of-place rock wedged beneath it.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/scientists-found-something-strange-lurking-under-bermuda/",
+      "title": "Scientists Found Something Strange Beneath the Bermuda Triangle",
+      "category": "politics",
+      "char_count": 174,
+      "word_count": 28,
+      "entity_score": 0
+    },
+    {
+      "text": "Ten weeks in Europe was a thrill on the food front. I love going as local as possible. When in Zurich, this is the place to go. Superb classics. Swiss service. Dreamy food. Enjoy.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/gavin-rossdale-names-his-8-favorite-restaurants-in-the-world/",
+      "title": "Gavin Rossdale Told Us His 8 Favorite Restaurants in the World",
+      "category": "politics",
+      "char_count": 179,
+      "word_count": 34,
+      "entity_score": 1
+    },
+    {
+      "text": "“Everybody rips off the United States and that’s it—it’s not going to happen anymore,” Trump said on Monday during a press conference.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trump-announces-us-withdrawal-from-world-health-organization/",
+      "title": "Donald Trump Announces US Withdrawal From World Health Organization",
+      "category": "politics",
+      "char_count": 134,
+      "word_count": 22,
+      "entity_score": 2
+    },
+    {
+      "text": "Trump cited the organization’s “mishandling” of the COVID-19 pandemic as the main reason for the decision.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trump-announces-us-withdrawal-from-world-health-organization/",
+      "title": "Donald Trump Announces US Withdrawal From World Health Organization",
+      "category": "politics",
+      "char_count": 106,
+      "word_count": 16,
+      "entity_score": 1
+    },
+    {
+      "text": "You probably don’t pay much attention to Albanian political news, so let me give you a quick summation of what’s going on over there. The Albanian government recently appointed an AI chatbot as a minister tasked with rooting out corruption in a government notorious for corruption.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/this-ai-chatbot-minister-just-announced-its-pregnant-seriously/",
+      "title": "This AI Chatbot Minister Just Announced It’s ‘Pregnant’. Seriously.",
+      "category": "politics",
+      "char_count": 281,
+      "word_count": 46,
+      "entity_score": 1
+    },
+    {
+      "text": "All of this makes it seem like the AI created them itself, though it sounds much more likely that it’s the doing of a team of coders whose work is being unveiled to the world in the most unsettling way possible.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/this-ai-chatbot-minister-just-announced-its-pregnant-seriously/",
+      "title": "This AI Chatbot Minister Just Announced It’s ‘Pregnant’. Seriously.",
+      "category": "politics",
+      "char_count": 211,
+      "word_count": 41,
+      "entity_score": 0
+    },
+    {
+      "text": "Whether this all represents a bold leap into the future or just a stupid novelty that we will all look back on with shame and embarrassment in due time remains to be seen. But I’m placing my money on the latter.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/this-ai-chatbot-minister-just-announced-its-pregnant-seriously/",
+      "title": "This AI Chatbot Minister Just Announced It’s ‘Pregnant’. Seriously.",
+      "category": "politics",
+      "char_count": 211,
+      "word_count": 41,
+      "entity_score": 0
+    },
+    {
+      "text": "A new bill, H.B. 395, sponsored by Republican state representatives, aims to create a public registry of individuals who fail to appear for job interviews. It’s intended to shame and discredit recipients of unemployment benefits publicly. How nice.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/no-showing-job-interviews-could-soon-land-you-on-a-public-shame-list/",
+      "title": "No-Showing Job Interviews Could Soon Land You on a Public Shame List",
+      "category": "politics",
+      "char_count": 248,
+      "word_count": 38,
+      "entity_score": 1
+    },
+    {
+      "text": "The bill does not provide clear guidance on what counts as a “legit” reason for missing an interview. Sick kid? Dead car battery? Mental health spiral? Good luck explaining that to a bureaucrat juggling thousands of cases and employer complaints.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/no-showing-job-interviews-could-soon-land-you-on-a-public-shame-list/",
+      "title": "No-Showing Job Interviews Could Soon Land You on a Public Shame List",
+      "category": "politics",
+      "char_count": 246,
+      "word_count": 40,
+      "entity_score": 0
+    },
+    {
+      "text": "Representative Brian Lorenz, an a**hole and one of the bill’s co-sponsors, says the goal is to “reward professionalism.” What it does is give employers more control in a system already stacked against workers, especially when those same employers ghost job seekers, as if it were a sport.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/no-showing-job-interviews-could-soon-land-you-on-a-public-shame-list/",
+      "title": "No-Showing Job Interviews Could Soon Land You on a Public Shame List",
+      "category": "politics",
+      "char_count": 288,
+      "word_count": 47,
+      "entity_score": 0
+    },
+    {
+      "text": "The authors argue that the current climate at NASA echoes the kind of “culture of organizational silence” that led to past catastrophes. Their message is clear: ignore the warnings now, and it might end with another space crew perishing at the ends of a spiteful penny-pinching government.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/trumps-budget-cuts-could-kill-astronauts-nasa-warns/",
+      "title": "Trump’s Budget Cuts Could Kill Astronauts, NASA Warns",
+      "category": "politics",
+      "char_count": 289,
+      "word_count": 47,
+      "entity_score": 2
+    },
+    {
+      "text": "NASA leadership is reportedly operating as if the budget has already been slashed, essentially putting the agency into full austerity mode. The letter urges interim administrator Sean Duffy to slow down.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/trumps-budget-cuts-could-kill-astronauts-nasa-warns/",
+      "title": "Trump’s Budget Cuts Could Kill Astronauts, NASA Warns",
+      "category": "politics",
+      "char_count": 203,
+      "word_count": 31,
+      "entity_score": 0
+    },
+    {
+      "text": "Nearly 300 current and former NASA employees, including at least four astronauts, have signed an open letter warning that the Trump administration’s proposed cuts to the agency could literally cost lives.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/trumps-budget-cuts-could-kill-astronauts-nasa-warns/",
+      "title": "Trump’s Budget Cuts Could Kill Astronauts, NASA Warns",
+      "category": "politics",
+      "char_count": 204,
+      "word_count": 31,
+      "entity_score": 0
+    },
+    {
+      "text": "Even they can’t figure out why Trump is suddenly pretending that Epstein’s criminality is a boring topic that no one has truly ever cared about, especially after years of fueling deep state conspiracies that made his supporters suspicious of everyone in the government.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trump-is-turning-on-his-maga-supporters-over-the-epstein-files/",
+      "title": "Donald Trump Is Turning on His MAGA Supporters Over the Epstein Files",
+      "category": "politics",
+      "char_count": 269,
+      "word_count": 43,
+      "entity_score": 2
+    },
+    {
+      "text": "Hard to say. I still lean toward no. His supporters become so good at brushing aside every atrocity that it’s hard to believe there’s anything Trump can do that will cause them to lose his trust.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trump-is-turning-on-his-maga-supporters-over-the-epstein-files/",
+      "title": "Donald Trump Is Turning on His MAGA Supporters Over the Epstein Files",
+      "category": "politics",
+      "char_count": 195,
+      "word_count": 36,
+      "entity_score": 1
+    },
+    {
+      "text": "However, all this Epstein-related news does feel a little different. It’s not just the fringe QAnon crowd demanding answers. Big names in Trump-world, such as Lara Trump and Speaker Mike Johnson, are also calling for transparency.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trump-is-turning-on-his-maga-supporters-over-the-epstein-files/",
+      "title": "Donald Trump Is Turning on His MAGA Supporters Over the Epstein Files",
+      "category": "politics",
+      "char_count": 230,
+      "word_count": 36,
+      "entity_score": 0
+    },
+    {
+      "text": "Ever since Donald Trump first slouched his way down that escalator to announce his candidacy for president, what feels like 10,000 years ago now, “clown” has always been a fitting go-to insult.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/stop-calling-donald-trump-a-clown-beg-actual-clowns/",
+      "title": "Stop Calling Donald Trump a Clown, Beg Actual Clowns",
+      "category": "politics",
+      "char_count": 193,
+      "word_count": 32,
+      "entity_score": 1
+    },
+    {
+      "text": "There are plenty of people out there terrified of clowns. Or view them as deeply unserious, and therefore feel the comparison is appropriate. But to clowns themselves, there couldn’t be any starker difference.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/stop-calling-donald-trump-a-clown-beg-actual-clowns/",
+      "title": "Stop Calling Donald Trump a Clown, Beg Actual Clowns",
+      "category": "politics",
+      "char_count": 209,
+      "word_count": 33,
+      "entity_score": 1
+    },
+    {
+      "text": "Clowns provide a benefit to the world by making people happy and spreading joy, particularly through organizations like Clowns Without Borders. Founded in 1995, they send literal clowns into disaster zones to bring a little fun and hope through the ancient art of being silly.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/stop-calling-donald-trump-a-clown-beg-actual-clowns/",
+      "title": "Stop Calling Donald Trump a Clown, Beg Actual Clowns",
+      "category": "politics",
+      "char_count": 276,
+      "word_count": 45,
+      "entity_score": 1
+    },
+    {
+      "text": "And then the other aspect which I think is important is social. Who do you know and hang out with? Who do you mix with? Who did you go to school with? If you read Social Class in the 21st Century, the [2015] Mike Savage book, they tried to hit all these different dimensions in The Great British Class Calculator. I think they’re all important.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/british-class-system-today-expert/",
+      "title": "How Does the British Class System Work Today? We Asked an Expert",
+      "category": "politics",
+      "char_count": 344,
+      "word_count": 65,
+      "entity_score": 0
+    },
+    {
+      "text": "In terms of the UK, specifically, despite the fact that working-class people have been excluded from everything, there’s this strange enduring quirk where everyone wants to be seen as working class. It’s seen as something that’s worthy. Almost like identifying with being working class is really all that’s left of the working-class experience.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/british-class-system-today-expert/",
+      "title": "How Does the British Class System Work Today? We Asked an Expert",
+      "category": "politics",
+      "char_count": 344,
+      "word_count": 53,
+      "entity_score": 0
+    },
+    {
+      "text": "The Coca-Cola company is well aware of Trump’s fandom of its beverages. They even gave him a commemorative bottle recently with an old-school soda bottle and a White House label on it that listed his Jan. 20 Inauguration Day. It was presented to him by the company’s CEO, James Quince.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trumps-diet-coke-button-is-back-in-the-oval-office/",
+      "title": "Donald Trump’s Diet Coke Button Is Back in the Oval Office",
+      "category": "politics",
+      "char_count": 285,
+      "word_count": 50,
+      "entity_score": 2
+    },
+    {
+      "text": "During his first term, the New York Times revealed just how obsessed he is with Diet Coke. Trump reportedly drinks 12 cans a day. There’s no way that’s healthy, right? I drink one of them, and I instantly hate myself for consuming the sugary drink.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trumps-diet-coke-button-is-back-in-the-oval-office/",
+      "title": "Donald Trump’s Diet Coke Button Is Back in the Oval Office",
+      "category": "politics",
+      "char_count": 248,
+      "word_count": 45,
+      "entity_score": 1
+    },
+    {
+      "text": "You have to respect someone who knows what they love and isn’t afraid to make it known. President Donald Trump has an affinity for Diet Coke—yes, you read that right—and it’s an affinity that’s so strong he built a damn button on the Oval Office desk to notify White House staffers to fill his cup up.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trumps-diet-coke-button-is-back-in-the-oval-office/",
+      "title": "Donald Trump’s Diet Coke Button Is Back in the Oval Office",
+      "category": "politics",
+      "char_count": 301,
+      "word_count": 56,
+      "entity_score": 1
+    },
+    {
+      "text": "President Donald Trump utilized his first day back in office to put a handful of executive orders in motion, one of which was announcing the United States’ withdrawal from the WHO, the World Health Organization.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trump-announces-us-withdrawal-from-world-health-organization/",
+      "title": "Donald Trump Announces US Withdrawal From World Health Organization",
+      "category": "politics",
+      "char_count": 211,
+      "word_count": 35,
+      "entity_score": 3
+    },
+    {
+      "text": "So far, Gaetz has secured 13 five-star reviews from happy customers who shelled out more than $500 to get a 1:27-minute-long video from him. Gaetz has made Cameos for occasions such as a holiday and a birthday. He also gave at least two people a pep talk.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/matt-gaetz-is-charging-500-for-pep-talks-on-cameo/",
+      "title": "Matt Gaetz Is Charging $500 for Pep Talks on Cameo",
+      "category": "politics",
+      "char_count": 255,
+      "word_count": 47,
+      "entity_score": 1
+    },
+    {
+      "text": "In addition to Gaetz, while on Cameo, fans can book videos from acclaimed people such as stars of Jersey Shore and Love Island, Santa Claus himself, a Donald Trump parody account, Chuck Norris, and Lance Bass.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/matt-gaetz-is-charging-500-for-pep-talks-on-cameo/",
+      "title": "Matt Gaetz Is Charging $500 for Pep Talks on Cameo",
+      "category": "politics",
+      "char_count": 209,
+      "word_count": 36,
+      "entity_score": 0
+    },
+    {
+      "text": "“I served in Congress. Trump nominated me to be US Attorney General (that didn’t work out). Once I fired the House Speaker,” his bio reads, alluding to his highly-publicized feud with Kevin McCarthy, whose ousting he spearheaded.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/matt-gaetz-is-charging-500-for-pep-talks-on-cameo/",
+      "title": "Matt Gaetz Is Charging $500 for Pep Talks on Cameo",
+      "category": "politics",
+      "char_count": 229,
+      "word_count": 37,
+      "entity_score": 0
+    },
+    {
+      "text": "The organization told ABC News that, in the 10 days following the 2024 presidential election, it fielded more than 5,400 calls. That’s nearly seven times the 800 calls it gets in a typical month.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/lgbtq-crisis-hotline-calls-us-presidential-election/",
+      "title": "LGBTQ Crisis Hotline Calls Spiked 700% After US Presidential Election",
+      "category": "politics",
+      "char_count": 195,
+      "word_count": 34,
+      "entity_score": 3
+    },
+    {
+      "text": "On Facebook, the organization added, “It may take time to process and regroup. Just know that you are loved and you matter, That isn’t changing. You are part of an amazing community and family. We’re all here to uplift and care for each other.”",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/lgbtq-crisis-hotline-calls-us-presidential-election/",
+      "title": "LGBTQ Crisis Hotline Calls Spiked 700% After US Presidential Election",
+      "category": "politics",
+      "char_count": 244,
+      "word_count": 44,
+      "entity_score": 2
+    },
+    {
+      "text": "In a post-election note, Jaymes Black, the CEO of The Trevor Project assured worried people that the organization will continue “to ensure that every LGBTQ+ young person has access to safe, affirming spaces, especially during challenging times.”",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/lgbtq-crisis-hotline-calls-us-presidential-election/",
+      "title": "LGBTQ Crisis Hotline Calls Spiked 700% After US Presidential Election",
+      "category": "politics",
+      "char_count": 245,
+      "word_count": 37,
+      "entity_score": 2
+    },
+    {
+      "text": "The mother, identified as X33991, appears to have taken in a cub believed to be about 10 or 11 months old. Researchers think the cub may have been orphaned, possibly crying out along the coast.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/wild-polar-bear-photographed-with-rare-adopted-cub/",
+      "title": "Wild Polar Bear Photographed With Rare ‘Adopted’ Cub",
+      "category": "politics",
+      "char_count": 193,
+      "word_count": 35,
+      "entity_score": 1
+    },
+    {
+      "text": "The Washington Post reports that, out of the roughly 4,600 bears studied in the region over nearly 50 years, this is only the 13th confirmed case of a mama polar bear raising a cub that she did not birth.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/wild-polar-bear-photographed-with-rare-adopted-cub/",
+      "title": "Wild Polar Bear Photographed With Rare ‘Adopted’ Cub",
+      "category": "politics",
+      "char_count": 204,
+      "word_count": 39,
+      "entity_score": 1
+    },
+    {
+      "text": "Researchers with Polar Bears International were tracking a female polar bear in Western Hudson Bay this spring. They fitted her with a GPS collar and documented her caring for a single cub.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/wild-polar-bear-photographed-with-rare-adopted-cub/",
+      "title": "Wild Polar Bear Photographed With Rare ‘Adopted’ Cub",
+      "category": "politics",
+      "char_count": 189,
+      "word_count": 32,
+      "entity_score": 0
+    },
+    {
+      "text": "The lawsuit alleges that the family never received an explanation for what happened or the clothing they had requested. Allegedly, the brain matter was reportedly left in the bag and hidden in a courtyard at the funeral home for weeks.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/funeral-home-accused-of-giving-a-father-his-sons-brain-in-a-bag/",
+      "title": "Funeral Home Accused of Giving a Father His Son’s Brain in a Bag",
+      "category": "politics",
+      "char_count": 235,
+      "word_count": 40,
+      "entity_score": 0
+    },
+    {
+      "text": "Attorneys for the family say the incident has scarred them for life, causing a range of issues from trauma, anxiety, and nightmares. The family’s lawsuit alleges negligence, fraud, breach of contract, and infliction of emotional distress.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/funeral-home-accused-of-giving-a-father-his-sons-brain-in-a-bag/",
+      "title": "Funeral Home Accused of Giving a Father His Son’s Brain in a Bag",
+      "category": "politics",
+      "char_count": 238,
+      "word_count": 36,
+      "entity_score": 0
+    },
+    {
+      "text": "According to the recently filed lawsuit, the family of Alexander Pinon claims that a funeral home employee gave Pinon’s father a red biohazard bag supposedly containing his son’s clothing. He allegedly then opened the bag to find a portion of his son’s brain.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/funeral-home-accused-of-giving-a-father-his-sons-brain-in-a-bag/",
+      "title": "Funeral Home Accused of Giving a Father His Son’s Brain in a Bag",
+      "category": "politics",
+      "char_count": 259,
+      "word_count": 43,
+      "entity_score": 0
+    },
+    {
+      "text": "Chef Sean Brock is the king of the Appalachian Mountains. His staggering three-restaurant building, which includes a research and development kitchen and a staff decompression room, is a state-of-the-art elegy to fine dining — JUNE.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/gavin-rossdale-names-his-8-favorite-restaurants-in-the-world/",
+      "title": "Gavin Rossdale Told Us His 8 Favorite Restaurants in the World",
+      "category": "politics",
+      "char_count": 232,
+      "word_count": 35,
+      "entity_score": 2
+    },
+    {
+      "text": "Americans in the LGBTQ community are reeling from the presidential election. The Rainbow Youth Project, an organization focused on young LGBTQ people, reported it’s “receiving an unprecedented number of crisis outreach calls” in the wake of Donald Trump’s victory.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/lgbtq-crisis-hotline-calls-us-presidential-election/",
+      "title": "LGBTQ Crisis Hotline Calls Spiked 700% After US Presidential Election",
+      "category": "politics",
+      "char_count": 264,
+      "word_count": 39,
+      "entity_score": 2
+    },
+    {
+      "text": "New York-based market research firm Talker Research conducted a survey of 2,000 parents in the United States with children ages 8 to 17. The survey also took into account the opinions of their kids to get a family-wide understanding of tech wars within the average American home.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/this-is-the-most-common-argument-kids-have-with-their-parents/",
+      "title": "This Is the Most Common Argument Kids Have With Their Parents",
+      "category": "politics",
+      "char_count": 279,
+      "word_count": 47,
+      "entity_score": 2
+    },
+    {
+      "text": "Previous studies of Bermuda’s volcanic rocks suggest they came from carbon-rich material pulled from deep within the mantle. That carbon may have been shoved downward hundreds of millions of years ago when Pangea formed. In other words, Bermuda’s weirdness could be the aftershock of ancient continental shifting.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/scientists-found-something-strange-lurking-under-bermuda/",
+      "title": "Scientists Found Something Strange Beneath the Bermuda Triangle",
+      "category": "politics",
+      "char_count": 313,
+      "word_count": 47,
+      "entity_score": 2
+    },
+    {
+      "text": "Nearly 9 in 10 parents report fighting with their children about tech, and half say it happens at least once a week. Families across the United States have a standing appointment with tech-related family arguments.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/this-is-the-most-common-argument-kids-have-with-their-parents/",
+      "title": "This Is the Most Common Argument Kids Have With Their Parents",
+      "category": "politics",
+      "char_count": 214,
+      "word_count": 35,
+      "entity_score": 1
+    },
+    {
+      "text": "Nearly 60 percent of the kids surveyed said they had seen violent or disturbing videos online in the past year. And almost half of them said that if they were parents, they would be deeply concerned about it all too.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/this-is-the-most-common-argument-kids-have-with-their-parents/",
+      "title": "This Is the Most Common Argument Kids Have With Their Parents",
+      "category": "politics",
+      "char_count": 216,
+      "word_count": 40,
+      "entity_score": 1
+    },
+    {
+      "text": "Lance Preston, the Rainbow Youth Project’s Executive Director, told the outlet that his organization wasn’t “prepared for the overwhelming call volume” they saw. It forced them to place callers, some of whom were supporters of LGBTQ youth, on hold.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/lgbtq-crisis-hotline-calls-us-presidential-election/",
+      "title": "LGBTQ Crisis Hotline Calls Spiked 700% After US Presidential Election",
+      "category": "politics",
+      "char_count": 248,
+      "word_count": 39,
+      "entity_score": 1
+    },
+    {
+      "text": "28 percent of parents say tech use is their most significant point of friction with their kids. 25 percent said it was chores, and 21 percent said it was schoolwork. Kids seem to agree. 30 percent of them say phones are the most significant point of contention, followed by gaming and social media.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/this-is-the-most-common-argument-kids-have-with-their-parents/",
+      "title": "This Is the Most Common Argument Kids Have With Their Parents",
+      "category": "politics",
+      "char_count": 298,
+      "word_count": 53,
+      "entity_score": 1
+    },
+    {
+      "text": "“It’s been all hands on deck. Here, it is coming from all over the country,” Aaron Almanza, the program’s executive director, told the outlet. However, we are definitely seeing more calls coming from red states, though it’s not a huge amount more than blue states. The fear is from all over the country. It is all ages.”",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/lgbtq-crisis-hotline-calls-us-presidential-election/",
+      "title": "LGBTQ Crisis Hotline Calls Spiked 700% After US Presidential Election",
+      "category": "politics",
+      "char_count": 320,
+      "word_count": 57,
+      "entity_score": 1
+    },
+    {
+      "text": "This is probably why the opposition party in Albania isn’t quite sold on Diella, as evidenced by the fact that during Diella’s inaugural address to parliament. If you missed it, members of the opposition party quite literally hurled trash at Rama’s cabinet in yet another reminder that all governments are a freak show; it’s just a matter of how the freaks choose to express their freakiness.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/this-ai-chatbot-minister-just-announced-its-pregnant-seriously/",
+      "title": "This AI Chatbot Minister Just Announced It’s ‘Pregnant’. Seriously.",
+      "category": "politics",
+      "char_count": 392,
+      "word_count": 66,
+      "entity_score": 1
+    },
+    {
+      "text": "Here’s how it works: If you’re on unemployment and don’t show up for an interview, employers can tattle to the state, and you might lose your benefits. What’s more, the information could be shared with other employers, creating a bureaucratic blacklist of people who dared to be late, sick, or not suited to a job selling printers at 9 AM on a Monday.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/no-showing-job-interviews-could-soon-land-you-on-a-public-shame-list/",
+      "title": "No-Showing Job Interviews Could Soon Land You on a Public Shame List",
+      "category": "politics",
+      "char_count": 351,
+      "word_count": 63,
+      "entity_score": 2
+    },
+    {
+      "text": "The Trump administration’s plans involve slashing nearly half of NASA’s $7.3 billion science budget, cutting almost a quarter from its overall $18.8 billion budget, and pink-slipping 2,700 staffers. That’s 15 percent of NASA’s workforce. That’s on top of the already-cut $118 million in grants and contracts. According to the letter, all of this is happening without proper legal authority, as Congress has not yet approved the cuts.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/trumps-budget-cuts-could-kill-astronauts-nasa-warns/",
+      "title": "Trump’s Budget Cuts Could Kill Astronauts, NASA Warns",
+      "category": "politics",
+      "char_count": 433,
+      "word_count": 67,
+      "entity_score": 4
+    },
+    {
+      "text": "Musk went from “brilliant genius” to “bullshit artist” in record time after disagreeing with Trump on a few too many talking points. But now, finally, it’s time for the grand finale: can he so thoroughly infuriate, degrade, condescend, and gaslight his own loyal supporters, who have stuck with him thanks to their incredible ability to ignore reality, that he finally pushes them away too?",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trump-is-turning-on-his-maga-supporters-over-the-epstein-files/",
+      "title": "Donald Trump Is Turning on His MAGA Supporters Over the Epstein Files",
+      "category": "politics",
+      "char_count": 390,
+      "word_count": 64,
+      "entity_score": 0
+    },
+    {
+      "text": "Cunningham recently performed in Beirut, Lebanon, in the ruins of war, to bring joy to children amid chaos. He’s not just a tough guy in theory, like the president often is. Cunningham is a boots-on-the-ground kind of guy who takes his work seriously. Calling Trump a clown, he argues, cheapens not only the dignity of the art form but the emotional labor it represents.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/stop-calling-donald-trump-a-clown-beg-actual-clowns/",
+      "title": "Stop Calling Donald Trump a Clown, Beg Actual Clowns",
+      "category": "politics",
+      "char_count": 370,
+      "word_count": 64,
+      "entity_score": 1
+    },
+    {
+      "text": "According to Marx, the petty bourgeoisie is this small producer that owns his own small property. Think of an artisan or a blacksmith in the olden days. And then in the modern days that would be seen as a shopkeeper or a self-employed tradesman—although today the class is so big because there are so many forms of self-employment, from hairdressing to personal training. The theory went that with the rise of monopoly capitalism, small production would be destroyed by huge-scale manufacturing. And to an extent, that definitely was true. In the welfare state period, the class shrinks. But then with neoliberalism, Thatcher consciously drives the rise in small businesses. And that class has exploded to around 5 million people now, solo self-employed. So that’s the old petty bourgeoisie.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/british-class-system-today-expert/",
+      "title": "How Does the British Class System Work Today? We Asked an Expert",
+      "category": "politics",
+      "char_count": 791,
+      "word_count": 128,
+      "entity_score": 3
+    },
+    {
+      "text": "Now, this is technically not a new thing. When he first took office in 2017 through 2021, he installed a red button—I’m imagining it looks like the ‘That Was Easy’ Staples’ button—on the desk. With him returning to the office this week, he didn’t waste any time in bringing the button back. The Wall Street Journal confirmed that the contraption was quickly set up in the office Monday, meaning it was a part of his extensive Day 1 activities in the office.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trumps-diet-coke-button-is-back-in-the-oval-office/",
+      "title": "Donald Trump’s Diet Coke Button Is Back in the Oval Office",
+      "category": "politics",
+      "char_count": 457,
+      "word_count": 82,
+      "entity_score": 1
+    },
+    {
+      "text": "Above all else, it’s the money the country has invested in the WHO that ultimately fueled the decision. America has been the WHO’s largest donor since its inception in 1948. The country has routinely given around $163 million in yearly contributions, with that number going as high as over $800 million at times. There are up to 194 countries involved in the WHO, with America providing up to a fifth of the organization’s funding, per USA Today.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trump-announces-us-withdrawal-from-world-health-organization/",
+      "title": "Donald Trump Announces US Withdrawal From World Health Organization",
+      "category": "politics",
+      "char_count": 446,
+      "word_count": 77,
+      "entity_score": 4
+    },
+    {
+      "text": "Mothers hunt seals on sea ice through the winter and then have to endure long summers with little to no food while nursing and protecting their young. Half of all cubs don’t survive into adulthood, and based on previous adoption cases documented in this population, adoption reduces those chances of survival even more, as only three of the previously documented adopted cubs lived long-term.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/wild-polar-bear-photographed-with-rare-adopted-cub/",
+      "title": "Wild Polar Bear Photographed With Rare ‘Adopted’ Cub",
+      "category": "politics",
+      "char_count": 392,
+      "word_count": 64,
+      "entity_score": 0
+    },
+    {
+      "text": "Pinon died in May inside a Santa Clara home. His mother signed a contract worth more than $10,000 for a full-service funeral package that included embalming, dressing, transportation, and burial. Before the service, the family decided to dress him in different clothing. On June 4, Pinon’s dad went to the mortuary to pick up the original clothes and got his son’s brain instead.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/funeral-home-accused-of-giving-a-father-his-sons-brain-in-a-bag/",
+      "title": "Funeral Home Accused of Giving a Father His Son’s Brain in a Bag",
+      "category": "politics",
+      "char_count": 379,
+      "word_count": 63,
+      "entity_score": 3
+    },
+    {
+      "text": "We had a night off in Chile. I had met Chef Rodolfo at a food event presented by Chef Dominique Crenn a few years ago. Rodolfo had traveled from Chile for this event. We connected over food and music. He came to our show in Santiago, and we had one of the best meals I’ve ever experienced: the seaweed preparations, the largest tomato I’ve ever seen, and firewood-grilled lamb that was the best I have ever tasted.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/gavin-rossdale-names-his-8-favorite-restaurants-in-the-world/",
+      "title": "Gavin Rossdale Told Us His 8 Favorite Restaurants in the World",
+      "category": "politics",
+      "char_count": 414,
+      "word_count": 77,
+      "entity_score": 0
+    },
+    {
+      "text": "Without the United States providing funding, the WHO will now likely lean on China, which has typically been the next largest provider. The order signed by Trump on Monday specifically mentions the population size of China and the fact that, despite it being far larger than The States’, the country pays less than 90% of what America does to the WHO.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trump-announces-us-withdrawal-from-world-health-organization/",
+      "title": "Donald Trump Announces US Withdrawal From World Health Organization",
+      "category": "politics",
+      "char_count": 351,
+      "word_count": 61,
+      "entity_score": 2
+    },
+    {
+      "text": "This wasn’t exactly a surprising move, considering Trump’s history with the organization. He attempted to remove the U.S. from the WHO in 2020 before Joe Biden overturned the decision and resumed funding for the organization. One of Trump’s major running points during his campaign was keeping American dollars in-house and not paying for what he perceived to be a waste of funds, which always meant the WHO was in jeopardy.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/donald-trump-announces-us-withdrawal-from-world-health-organization/",
+      "title": "Donald Trump Announces US Withdrawal From World Health Organization",
+      "category": "politics",
+      "char_count": 424,
+      "word_count": 70,
+      "entity_score": 2
+    },
+    {
+      "text": "Do you think that was ultimately behind the riots across England last summer?There is racism, but much of this is rooted in what’s called ‘producerism’—which used to be about keeping what you made, but is today essentially about ‘the hard workers’ versus ‘parasites’. Migrants have fallen into that latter category. Housing is central to that idea of getting something for nothing—and being put up in hotels while the state lets ‘our’ people sleep rough; that’s a very powerful narrative. Obviously, the people pushing that narrative don’t care about ‘our’ homeless either, but the resentment is rooted in tensions over scarce resources caused by austerity.",
+      "source": "Vice",
+      "url": "https://www.vice.com/en/article/british-class-system-today-expert/",
+      "title": "How Does the British Class System Work Today? We Asked an Expert",
+      "category": "politics",
+      "char_count": 657,
+      "word_count": 104,
+      "entity_score": 2
+    },
+    {
+      "text": "TRUMP TO HOST SYRIAN PRESIDENT IN HISTORIC WHITE HOUSE MEETING AMID PUSH FOR REGIONAL PEACE",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/deadly-strike-u-s-troops-tests-trumps-counter-isis-plan-his-trust-syrias-new-leader",
+      "title": "Deadly strike on US troops tests Trump’s counter-ISIS plan — and his trust in Syria’s new leader",
+      "category": "politics",
+      "char_count": 91,
+      "word_count": 15,
+      "entity_score": 1
+    },
+    {
+      "text": "Get the latest updates from the 2024 campaign trail, exclusive interviews and more Fox News politics content.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/justice-department-prepares-drop-trove-epstein-files-deadline-looms",
+      "title": "Justice Department prepares to drop trove of Epstein files as deadline looms",
+      "category": "politics",
+      "char_count": 109,
+      "word_count": 17,
+      "entity_score": 1
+    },
+    {
+      "text": "Get the latest updates from the 2024 campaign trail, exclusive interviews and more Fox News politics content.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/rubio-unloads-alarmists-touts-state-dept-disaster-response-after-usaid-closure",
+      "title": "Rubio unloads on ‘alarmists,’ touts State Dept disaster response after USAID closure",
+      "category": "politics",
+      "char_count": 109,
+      "word_count": 17,
+      "entity_score": 1
+    },
+    {
+      "text": "Get the latest updates from the 2024 campaign trail, exclusive interviews and more Fox News politics content.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/us-military-strikes-narco-terrorist-vessels-latest-eastern-pacific-drug-trafficking-operation",
+      "title": "US military strikes narco-terrorist vessels in latest Eastern Pacific drug trafficking operation",
+      "category": "politics",
+      "char_count": 109,
+      "word_count": 17,
+      "entity_score": 1
+    },
+    {
+      "text": "GOP SENATE CAMPAIGN CHIEF AIMS TO EXPAND 2026 MAP IN THIS BLUE-LEANING STATE",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/nc-senate-showdown-escalates-trump-rallies-behind-whatley-keep-gop-seat",
+      "title": "NC Senate showdown escalates as Trump rallies behind Whatley to keep GOP seat",
+      "category": "politics",
+      "char_count": 76,
+      "word_count": 13,
+      "entity_score": 1
+    },
+    {
+      "text": "Vance and Charlie Kirk were close friends, and the vice president credits Kirk with his political rise.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/2028-power-move-turning-points-erika-kirk-throws-support-behind-jd-vance-maga-heir-apparent",
+      "title": "2028 power move: Turning Point's Erika Kirk throws support behind JD Vance as MAGA ‘heir apparent’",
+      "category": "politics",
+      "char_count": 103,
+      "word_count": 17,
+      "entity_score": 1
+    },
+    {
+      "text": "SENATE SENDS $901B DEFENSE BILL TO TRUMP AFTER CLASHES OVER BOAT STRIKE, DC AIRSPACE",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/democrats-last-minute-move-block-gop-funding-plan-sends-lawmakers-home-early",
+      "title": "Democrats' last-minute move to block GOP funding plan sends lawmakers home early",
+      "category": "politics",
+      "char_count": 84,
+      "word_count": 14,
+      "entity_score": 1
+    },
+    {
+      "text": "President Donald Trump signed the NDAA into law on Thursday evening.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/130-house-republicans-demand-assurances-before-us-eases-syria-sanctions",
+      "title": "134 House Republicans demand 'assurances' before US eases Syria sanctions",
+      "category": "politics",
+      "char_count": 68,
+      "word_count": 11,
+      "entity_score": 2
+    },
+    {
+      "text": "Trump signed it quietly Thursday evening, according to Reuters.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/trump-quietly-signs-sweeping-901b-defense-bill-bipartisan-senate-passage",
+      "title": "Trump quietly signs sweeping $901B defense bill after bipartisan Senate passage",
+      "category": "politics",
+      "char_count": 63,
+      "word_count": 9,
+      "entity_score": 1
+    },
+    {
+      "text": "DOJ FACES FRIDAY DEADLINE TO RELEASE EPSTEIN FILES AS LAWMAKERS PUSH FOR TRANSPARENCY",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/trump-gets-417-nominees-confirmed-senate-surpassing-bidens-first-year-total-record-pace",
+      "title": "Trump gets 417 nominees confirmed by Senate in 2025, surpasses Biden's first-year total in record pace",
+      "category": "politics",
+      "char_count": 85,
+      "word_count": 13,
+      "entity_score": 1
+    },
+    {
+      "text": "President Trump said on Thursday he was \"honored\" and \"surprised\" by the update.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/maria-shriver-slams-trump-kennedy-center-name-change-decision-comprehension",
+      "title": "Maria Shriver slams Trump over Kennedy Center name change decision: 'Beyond comprehension'",
+      "category": "politics",
+      "char_count": 80,
+      "word_count": 13,
+      "entity_score": 2
+    },
+    {
+      "text": "Ocasio-Cortez sparked the first round of attention Wednesday by reposting the Verasight poll on X.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/aoc-predicts-triumph-jd-vance-hypothetical-2028-matchup-let-record-show-i-would-stomp-him",
+      "title": "AOC predicts triumph over JD Vance in hypothetical 2028 matchup: 'Let the record show: I would stomp him'",
+      "category": "politics",
+      "char_count": 98,
+      "word_count": 15,
+      "entity_score": 1
+    },
+    {
+      "text": "-Magnitude ‘cannot be overstated’: feds say Minnesota fraud may be half of $18B total",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/fox-news-politics-newsletter-house-dems-drop-epstein-images-before-release-deadline",
+      "title": "Fox News Politics Newsletter: House Dems drop Epstein images before release deadline",
+      "category": "politics",
+      "char_count": 85,
+      "word_count": 14,
+      "entity_score": 3
+    },
+    {
+      "text": "$11B FIREPOWER: Trump admin announces $11B Taiwan arms sales deal",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/fox-news-politics-newsletter-house-dems-drop-epstein-images-before-release-deadline",
+      "title": "Fox News Politics Newsletter: House Dems drop Epstein images before release deadline",
+      "category": "politics",
+      "char_count": 65,
+      "word_count": 10,
+      "entity_score": 1
+    },
+    {
+      "text": "Sgt. William Howard (left) and Sgt. Edgar Torres-Tovar (right) died Dec. 13, 2025 in Palmyra, Syria. (Iowa National Guard)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/deadly-strike-u-s-troops-tests-trumps-counter-isis-plan-his-trust-syrias-new-leader",
+      "title": "Deadly strike on US troops tests Trump’s counter-ISIS plan — and his trust in Syria’s new leader",
+      "category": "politics",
+      "char_count": 122,
+      "word_count": 19,
+      "entity_score": 1
+    },
+    {
+      "text": "Rep. Marjorie Taylor Greene, R-Ga., added that U.S. troops \"should not be sent to foreign countries to be killed in foreign lands like Syria… Bring our troops home!!!\"",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/deadly-strike-u-s-troops-tests-trumps-counter-isis-plan-his-trust-syrias-new-leader",
+      "title": "Deadly strike on US troops tests Trump’s counter-ISIS plan — and his trust in Syria’s new leader",
+      "category": "politics",
+      "char_count": 167,
+      "word_count": 28,
+      "entity_score": 1
+    },
+    {
+      "text": "The White House did not provide additional clarification on what types of retaliation the U.S. would pursue in response to the attack, and referred Fox News Digital back to Trump’s initial statement.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/deadly-strike-u-s-troops-tests-trumps-counter-isis-plan-his-trust-syrias-new-leader",
+      "title": "Deadly strike on US troops tests Trump’s counter-ISIS plan — and his trust in Syria’s new leader",
+      "category": "politics",
+      "char_count": 199,
+      "word_count": 32,
+      "entity_score": 1
+    },
+    {
+      "text": "The Justice Department is expected to release a tranche of records related to Jeffrey Epstein Friday. (New York State Sex Offender Registry via AP, File)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/justice-department-prepares-drop-trove-epstein-files-deadline-looms",
+      "title": "Justice Department prepares to drop trove of Epstein files as deadline looms",
+      "category": "politics",
+      "char_count": 153,
+      "word_count": 25,
+      "entity_score": 4
+    },
+    {
+      "text": "Department of Justice officials are in their final sprint to assemble by Friday a tranche of records related to Jeffrey Epstein, but the extent of material that will be made public remains unknown.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/justice-department-prepares-drop-trove-epstein-files-deadline-looms",
+      "title": "Justice Department prepares to drop trove of Epstein files as deadline looms",
+      "category": "politics",
+      "char_count": 197,
+      "word_count": 33,
+      "entity_score": 2
+    },
+    {
+      "text": "Attorney General Pam Bondi speaks during a Senate Judiciary Committee hearing on Capitol Hill in Washington, D.C. (Mark Schiefelbein/AP)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/justice-department-prepares-drop-trove-epstein-files-deadline-looms",
+      "title": "Justice Department prepares to drop trove of Epstein files as deadline looms",
+      "category": "politics",
+      "char_count": 136,
+      "word_count": 19,
+      "entity_score": 1
+    },
+    {
+      "text": "USAID was officially closed down in July — a move that attracted criticism from Democrats and former Presidents George W. Bush and Barack Obama.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/rubio-unloads-alarmists-touts-state-dept-disaster-response-after-usaid-closure",
+      "title": "Rubio unloads on ‘alarmists,’ touts State Dept disaster response after USAID closure",
+      "category": "politics",
+      "char_count": 144,
+      "word_count": 24,
+      "entity_score": 2
+    },
+    {
+      "text": "The State Department deployed a regional disaster assistance response team (DART) and activated U.S.-based urban search and rescue (USAR) teams to support response efforts in the region as part of recovery efforts.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/rubio-unloads-alarmists-touts-state-dept-disaster-response-after-usaid-closure",
+      "title": "Rubio unloads on ‘alarmists,’ touts State Dept disaster response after USAID closure",
+      "category": "politics",
+      "char_count": 214,
+      "word_count": 32,
+      "entity_score": 2
+    },
+    {
+      "text": "A man looks at a fallen tree in St. Catherine, Jamaica, shortly before Hurricane Melissa made landfall Oct. 28, 2025. (Ricardo Makyn/AFP via Getty Images)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/rubio-unloads-alarmists-touts-state-dept-disaster-response-after-usaid-closure",
+      "title": "Rubio unloads on ‘alarmists,’ touts State Dept disaster response after USAID closure",
+      "category": "politics",
+      "char_count": 154,
+      "word_count": 25,
+      "entity_score": 1
+    },
+    {
+      "text": "President Donald Trump is targeting narco-terrorist vessels in the Eastern Pacific. (AP Photo/Julia Demaree Nikhinson)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/us-military-strikes-narco-terrorist-vessels-latest-eastern-pacific-drug-trafficking-operation",
+      "title": "US military strikes narco-terrorist vessels in latest Eastern Pacific drug trafficking operation",
+      "category": "politics",
+      "char_count": 118,
+      "word_count": 15,
+      "entity_score": 1
+    },
+    {
+      "text": "The Pentagon has not released the identities of the four narco-terrorists killed or the specific terrorist organization involved.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/us-military-strikes-narco-terrorist-vessels-latest-eastern-pacific-drug-trafficking-operation",
+      "title": "US military strikes narco-terrorist vessels in latest Eastern Pacific drug trafficking operation",
+      "category": "politics",
+      "char_count": 129,
+      "word_count": 18,
+      "entity_score": 1
+    },
+    {
+      "text": "War Secretary Pete Hegseth ordered Thursday's latest military strike against narco-terrorists in the Eastern Pacific. (AP Photo/Julia Demaree Nikhinson)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/us-military-strikes-narco-terrorist-vessels-latest-eastern-pacific-drug-trafficking-operation",
+      "title": "US military strikes narco-terrorist vessels in latest Eastern Pacific drug trafficking operation",
+      "category": "politics",
+      "char_count": 152,
+      "word_count": 19,
+      "entity_score": 1
+    },
+    {
+      "text": "RNC Chair Michael Whatley announces his run for Senator for North Carolina on July 31, 2025 in Gastonia, N.C. (Paul Steinhauser/Fox News)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/nc-senate-showdown-escalates-trump-rallies-behind-whatley-keep-gop-seat",
+      "title": "NC Senate showdown escalates as Trump rallies behind Whatley to keep GOP seat",
+      "category": "politics",
+      "char_count": 137,
+      "word_count": 22,
+      "entity_score": 3
+    },
+    {
+      "text": "Then-RNC Chair Michael Whatley gavels to begin the Republican National Convention on Monday, July 15, 2024, in Milwaukee. (AP Photo/J. Scott Applewhite)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/nc-senate-showdown-escalates-trump-rallies-behind-whatley-keep-gop-seat",
+      "title": "NC Senate showdown escalates as Trump rallies behind Whatley to keep GOP seat",
+      "category": "politics",
+      "char_count": 152,
+      "word_count": 22,
+      "entity_score": 3
+    },
+    {
+      "text": "Then-Republican presidential candidate and former President Donald Trump speaks during a campaign event at Greensboro Coliseum on March 2, 2024, in Greensboro, North Carolina. (Alex Wong/Getty Images)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/nc-senate-showdown-escalates-trump-rallies-behind-whatley-keep-gop-seat",
+      "title": "NC Senate showdown escalates as Trump rallies behind Whatley to keep GOP seat",
+      "category": "politics",
+      "char_count": 200,
+      "word_count": 27,
+      "entity_score": 3
+    },
+    {
+      "text": "Vice President JD Vance speaks during a memorial service for slain conservative leader and commentator Charlie Kirk in Glendale, Arizona, on Sept. 21, 2025. (Daniel Cole/Reuters)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/2028-power-move-turning-points-erika-kirk-throws-support-behind-jd-vance-maga-heir-apparent",
+      "title": "2028 power move: Turning Point's Erika Kirk throws support behind JD Vance as MAGA ‘heir apparent’",
+      "category": "politics",
+      "char_count": 178,
+      "word_count": 26,
+      "entity_score": 2
+    },
+    {
+      "text": "Erika Kirk gives a rousing speech at AmericaFest, outlining TPUSA's mission for 2026 and 2028 to build a 'red wall' in key states, and endorsing JD Vance for president in 2028. Senate candidate Michael Whatley reacts.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/2028-power-move-turning-points-erika-kirk-throws-support-behind-jd-vance-maga-heir-apparent",
+      "title": "2028 power move: Turning Point's Erika Kirk throws support behind JD Vance as MAGA ‘heir apparent’",
+      "category": "politics",
+      "char_count": 217,
+      "word_count": 36,
+      "entity_score": 2
+    },
+    {
+      "text": "Paul Steinhauser is a politics reporter based in the swing state of New Hampshire. He covers the campaign trail from coast to coast.\"",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/2028-power-move-turning-points-erika-kirk-throws-support-behind-jd-vance-maga-heir-apparent",
+      "title": "2028 power move: Turning Point's Erika Kirk throws support behind JD Vance as MAGA ‘heir apparent’",
+      "category": "politics",
+      "char_count": 133,
+      "word_count": 23,
+      "entity_score": 1
+    },
+    {
+      "text": "Failure to advance the package on Thursday does not guarantee another government shutdown next month, but it does tee up what will likely be a brutal January in the upper chamber.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/democrats-last-minute-move-block-gop-funding-plan-sends-lawmakers-home-early",
+      "title": "Democrats' last-minute move to block GOP funding plan sends lawmakers home early",
+      "category": "politics",
+      "char_count": 179,
+      "word_count": 31,
+      "entity_score": 3
+    },
+    {
+      "text": "Director of the U.S. Office of Management and Budget (OMB) Russ Vought speaks to reporters outside the West Wing of the White House in Washington, July 17, 2025. (Andrew Caballero-Reynolds/Getty Images)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/democrats-last-minute-move-block-gop-funding-plan-sends-lawmakers-home-early",
+      "title": "Democrats' last-minute move to block GOP funding plan sends lawmakers home early",
+      "category": "politics",
+      "char_count": 202,
+      "word_count": 31,
+      "entity_score": 3
+    },
+    {
+      "text": "Despite the inability to move forward with the funding package, for now, it appears that neither side wants to thrust the federal government into another shutdown.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/democrats-last-minute-move-block-gop-funding-plan-sends-lawmakers-home-early",
+      "title": "Democrats' last-minute move to block GOP funding plan sends lawmakers home early",
+      "category": "politics",
+      "char_count": 163,
+      "word_count": 26,
+      "entity_score": 1
+    },
+    {
+      "text": "Interim Syria President Ahmed al-Sharaa speaks during the Concordia Annual Summit in New York, Sept. 22, 2025. (Andres Kudacki/AP Photo)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/130-house-republicans-demand-assurances-before-us-eases-syria-sanctions",
+      "title": "134 House Republicans demand 'assurances' before US eases Syria sanctions",
+      "category": "politics",
+      "char_count": 136,
+      "word_count": 20,
+      "entity_score": 3
+    },
+    {
+      "text": "Ahmed Hussein al-Sharaa took power in Syria after the previous government led by Bashar al-Assad was toppled in 2024.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/130-house-republicans-demand-assurances-before-us-eases-syria-sanctions",
+      "title": "134 House Republicans demand 'assurances' before US eases Syria sanctions",
+      "category": "politics",
+      "char_count": 117,
+      "word_count": 19,
+      "entity_score": 2
+    },
+    {
+      "text": "The new leader has sought friendlier relations with the West, even visiting the White House in November of this year.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/130-house-republicans-demand-assurances-before-us-eases-syria-sanctions",
+      "title": "134 House Republicans demand 'assurances' before US eases Syria sanctions",
+      "category": "politics",
+      "char_count": 117,
+      "word_count": 20,
+      "entity_score": 1
+    },
+    {
+      "text": "President Donald Trump announced his proposal for a \"Golden Dome\" missile defense system in the United States May 20, 2025. (Reuters/Leah Millis/File Photo; Chip Somodevilla/Getty Images)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/trump-quietly-signs-sweeping-901b-defense-bill-bipartisan-senate-passage",
+      "title": "Trump quietly signs sweeping $901B defense bill after bipartisan Senate passage",
+      "category": "politics",
+      "char_count": 187,
+      "word_count": 26,
+      "entity_score": 4
+    },
+    {
+      "text": "President Donald Trump signs an executive order in the Oval Office of the White House in Washington, D.C., Dec. 11, 2025. (Al Drago/Reuters)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/trump-quietly-signs-sweeping-901b-defense-bill-bipartisan-senate-passage",
+      "title": "Trump quietly signs sweeping $901B defense bill after bipartisan Senate passage",
+      "category": "politics",
+      "char_count": 140,
+      "word_count": 23,
+      "entity_score": 3
+    },
+    {
+      "text": "President Trump signed into law a nearly $1 trillion defense policy bill Thursday and approved what looks to be the largest military spending package in U.S. history.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/trump-quietly-signs-sweeping-901b-defense-bill-bipartisan-senate-passage",
+      "title": "Trump quietly signs sweeping $901B defense bill after bipartisan Senate passage",
+      "category": "politics",
+      "char_count": 166,
+      "word_count": 27,
+      "entity_score": 3
+    },
+    {
+      "text": "President Donald Trump walks from the Oval Office to board Marine One on the South Lawn of the White House en route to Florida March 28, 2025, in Washington. (Mark Schiefelbein/AP Photo)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/trump-gets-417-nominees-confirmed-senate-surpassing-bidens-first-year-total-record-pace",
+      "title": "Trump gets 417 nominees confirmed by Senate in 2025, surpasses Biden's first-year total in record pace",
+      "category": "politics",
+      "char_count": 186,
+      "word_count": 32,
+      "entity_score": 4
+    },
+    {
+      "text": "Senate Majority Leader John Thune speaks during a press conference with Senate Republican leadership after a policy luncheon on Capitol Hill in Washington Oct. 28, 2025. (Nathan Posner/Anadolu via Getty Images)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/trump-gets-417-nominees-confirmed-senate-surpassing-bidens-first-year-total-record-pace",
+      "title": "Trump gets 417 nominees confirmed by Senate in 2025, surpasses Biden's first-year total in record pace",
+      "category": "politics",
+      "char_count": 210,
+      "word_count": 31,
+      "entity_score": 2
+    },
+    {
+      "text": "\"Democrats cannot deal with the fact that the American people elected President Trump, and so they've engaged in this pointless political obstruction in revenge,\" Thune said.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/trump-gets-417-nominees-confirmed-senate-surpassing-bidens-first-year-total-record-pace",
+      "title": "Trump gets 417 nominees confirmed by Senate in 2025, surpasses Biden's first-year total in record pace",
+      "category": "politics",
+      "char_count": 174,
+      "word_count": 26,
+      "entity_score": 1
+    },
+    {
+      "text": "President Donald Trump speaks at the 48th Kennedy Center Honors Medallion Reception at the U.S. Department of State on December 6, 2025, in Washington, D.C. (Paul Morigi/Getty Images)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/maria-shriver-slams-trump-kennedy-center-name-change-decision-comprehension",
+      "title": "Maria Shriver slams Trump over Kennedy Center name change decision: 'Beyond comprehension'",
+      "category": "politics",
+      "char_count": 183,
+      "word_count": 28,
+      "entity_score": 6
+    },
+    {
+      "text": "The John F. Kennedy Center for the Performing Arts is lit in red, white, and blue and reflected in the Potomac River at dusk on May 8, 2025, in Washington, D.C. (David Ake/Getty Images)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/maria-shriver-slams-trump-kennedy-center-name-change-decision-comprehension",
+      "title": "Maria Shriver slams Trump over Kennedy Center name change decision: 'Beyond comprehension'",
+      "category": "politics",
+      "char_count": 185,
+      "word_count": 34,
+      "entity_score": 3
+    },
+    {
+      "text": "President Donald Trump responds to the board members voting to rename performing arts center the 'Trump-Kennedy Center.'",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/maria-shriver-slams-trump-kennedy-center-name-change-decision-comprehension",
+      "title": "Maria Shriver slams Trump over Kennedy Center name change decision: 'Beyond comprehension'",
+      "category": "politics",
+      "char_count": 120,
+      "word_count": 17,
+      "entity_score": 1
+    },
+    {
+      "text": "Former Vice President Kamala Harris speaks during a campaign rally at Jenison Field House on the campus of Michigan State University, Sunday, Nov. 3, 2024, in East Lansing, Mich. (AP Photo/Jacquelyn Martin)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/aoc-predicts-triumph-jd-vance-hypothetical-2028-matchup-let-record-show-i-would-stomp-him",
+      "title": "AOC predicts triumph over JD Vance in hypothetical 2028 matchup: 'Let the record show: I would stomp him'",
+      "category": "politics",
+      "char_count": 206,
+      "word_count": 32,
+      "entity_score": 4
+    },
+    {
+      "text": "Vice President JD Vance speaking with reporters in the James Brady Press Briefing Room at the White House, Oct. 1, 2025, in Washington, D.C. (Evan Vucci/The Associated Press)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/aoc-predicts-triumph-jd-vance-hypothetical-2028-matchup-let-record-show-i-would-stomp-him",
+      "title": "AOC predicts triumph over JD Vance in hypothetical 2028 matchup: 'Let the record show: I would stomp him'",
+      "category": "politics",
+      "char_count": 174,
+      "word_count": 28,
+      "entity_score": 3
+    },
+    {
+      "text": "AOC says she would ‘stomp' JD Vance after poll shows her leading in a hypothetical presidential matchup. (Credit: @PabloReports via Storyful)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/aoc-predicts-triumph-jd-vance-hypothetical-2028-matchup-let-record-show-i-would-stomp-him",
+      "title": "AOC predicts triumph over JD Vance in hypothetical 2028 matchup: 'Let the record show: I would stomp him'",
+      "category": "politics",
+      "char_count": 141,
+      "word_count": 21,
+      "entity_score": 1
+    },
+    {
+      "text": "Former sportscaster turned political activist and commentator Michele Tafoya is seen at the Fox News Channel studios on April 18, 2024 in New York City. ( Roy Rochlin/Getty Images)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/fox-news-politics-newsletter-house-dems-drop-epstein-images-before-release-deadline",
+      "title": "Fox News Politics Newsletter: House Dems drop Epstein images before release deadline",
+      "category": "politics",
+      "char_count": 180,
+      "word_count": 29,
+      "entity_score": 4
+    },
+    {
+      "text": "Rep. Dan Newhouse, R-Wash., at a hearing on Capitol Hill, July 25, 2019, in Washington, D.C. (Chip Somodevilla/Getty Images)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/fox-news-politics-newsletter-senate-sends-901b-defense-bill-trump",
+      "title": "Fox News Politics Newsletter: Senate sends $901B defense bill to Trump",
+      "category": "politics",
+      "char_count": 124,
+      "word_count": 19,
+      "entity_score": 3
+    },
+    {
+      "text": "Rep. Mariannette Miller-Meeks speaks during a news conference at the U.S. Capitol on Dec. 16, 2025 in Washington, D.C. (Alex Wong/Getty Images)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/fox-news-politics-newsletter-senate-sends-901b-defense-bill-trump",
+      "title": "Fox News Politics Newsletter: Senate sends $901B defense bill to Trump",
+      "category": "politics",
+      "char_count": 143,
+      "word_count": 22,
+      "entity_score": 3
+    },
+    {
+      "text": "People march as they take part in a strike to demand action on the global climate crisis on Sept. 20, 2019 in New York City. (Spencer Platt/Getty Images)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/fox-news-politics-newsletter-senate-sends-901b-defense-bill-trump",
+      "title": "Fox News Politics Newsletter: Senate sends $901B defense bill to Trump",
+      "category": "politics",
+      "char_count": 153,
+      "word_count": 28,
+      "entity_score": 3
+    },
+    {
+      "text": "Taiwanese conscripts look on during a visit by Taiwan's President Lai Ching-te to a military base in Taichung on June 28, 2024. (SAM YEH/AFP via Getty Images)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/fox-news-politics-newsletter-house-dems-drop-epstein-images-before-release-deadline",
+      "title": "Fox News Politics Newsletter: House Dems drop Epstein images before release deadline",
+      "category": "politics",
+      "char_count": 158,
+      "word_count": 27,
+      "entity_score": 3
+    },
+    {
+      "text": "The Do No Harm in Medicaid Act was introduced by Rep. Dan Crenshaw, R-Texas, and received support from all House Republicans when it was put to a vote Thursday afternoon.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/201-house-democrats-vote-against-blocking-medicaid-dollars-kids-transgender-surgeries",
+      "title": "201 House Democrats vote against blocking Medicaid dollars for kids' transgender surgeries",
+      "category": "politics",
+      "char_count": 170,
+      "word_count": 30,
+      "entity_score": 3
+    },
+    {
+      "text": "Syria’s Interior Ministry spokesman, Noureddine al-Baba, said the gunman had been scheduled to be relieved of duty Sunday after authorities identified he held \"extremist\" views. Al-Baba told The Associated Press that the government had been forced to recruit quickly amid severe security shortages following Assad’s ouster.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/deadly-strike-u-s-troops-tests-trumps-counter-isis-plan-his-trust-syrias-new-leader",
+      "title": "Deadly strike on US troops tests Trump’s counter-ISIS plan — and his trust in Syria’s new leader",
+      "category": "politics",
+      "char_count": 323,
+      "word_count": 46,
+      "entity_score": 3
+    },
+    {
+      "text": "Friday's expected release marks the culmination of a matter that has roiled the administration all year, beginning with Bondi enraging President Donald Trump's base by hyping up a rollout of the case files and then failing to produce anything new.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/justice-department-prepares-drop-trove-epstein-files-deadline-looms",
+      "title": "Justice Department prepares to drop trove of Epstein files as deadline looms",
+      "category": "politics",
+      "char_count": 247,
+      "word_count": 40,
+      "entity_score": 2
+    },
+    {
+      "text": "The Department of Government Efficiency (DOGE) targeted USAID in its push to eliminate wasteful spending during a review earlier in 2025. The agency attracted scrutiny for a series of funding choices, including allocating $1.5 million for a program that sought to \"advance diversity, equity and inclusion in Serbia’s workplaces and business communities\" and a $70,000 program for a \"DEI musical\" in Ireland.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/rubio-unloads-alarmists-touts-state-dept-disaster-response-after-usaid-closure",
+      "title": "Rubio unloads on ‘alarmists,’ touts State Dept disaster response after USAID closure",
+      "category": "politics",
+      "char_count": 407,
+      "word_count": 62,
+      "entity_score": 5
+    },
+    {
+      "text": "\"On Dec. 18, at the direction of [Secretary of War] Pete Hegseth, Joint Task Force Southern Spear conducted lethal kinetic strikes on two vessels operated by Designated Terrorist Organizations in international waters,\" the post read. \"Intelligence confirmed that the vessels were transiting along known narco-trafficking routes in the Eastern Pacific and were engaged in narco-trafficking operations.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/us-military-strikes-narco-terrorist-vessels-latest-eastern-pacific-drug-trafficking-operation",
+      "title": "US military strikes narco-terrorist vessels in latest Eastern Pacific drug trafficking operation",
+      "category": "politics",
+      "char_count": 400,
+      "word_count": 56,
+      "entity_score": 1
+    },
+    {
+      "text": "\"President Trump won North Carolina all three times. 2016, 2020, and 2024... because he connects directly with the people of North Carolina, talking about the issues that they care about. So it is very important to have him on the ground,\" Whatley emphasized this week in a Fox News Digital interview.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/nc-senate-showdown-escalates-trump-rallies-behind-whatley-keep-gop-seat",
+      "title": "NC Senate showdown escalates as Trump rallies behind Whatley to keep GOP seat",
+      "category": "politics",
+      "char_count": 301,
+      "word_count": 51,
+      "entity_score": 2
+    },
+    {
+      "text": "Vice President JD Vance speaks Sunday at Turning Point USA's America Fest conference. But the vice president landed a major endorsement when the annual conference, held by the increasingly influential conservative group, kicked off on Thursday.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/2028-power-move-turning-points-erika-kirk-throws-support-behind-jd-vance-maga-heir-apparent",
+      "title": "2028 power move: Turning Point's Erika Kirk throws support behind JD Vance as MAGA ‘heir apparent’",
+      "category": "politics",
+      "char_count": 244,
+      "word_count": 36,
+      "entity_score": 3
+    },
+    {
+      "text": "\"We need to find some Republican supporters. All we’re trying to do is just protect the budget that was already there,\" Hickenlooper said. \"So, whatever disagreement there is between the state, the governor of Colorado, and the President of the United States, that shouldn't affect a scientific institution. Science should be free of that kind of politics.\"",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/democrats-last-minute-move-block-gop-funding-plan-sends-lawmakers-home-early",
+      "title": "Democrats' last-minute move to block GOP funding plan sends lawmakers home early",
+      "category": "politics",
+      "char_count": 357,
+      "word_count": 57,
+      "entity_score": 2
+    },
+    {
+      "text": "President Donald Trump and Secretary of War Pete Hegseth salute as a U.S. Army carrier team moves a flag-draped transfer case containing the remains of Iowa National Guardsman Sgt. William Nathaniel Howard at Dover Air Force Base on Dec. 17, 2025 in Dover, Del. (Anna Moneymaker/Getty Images)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/130-house-republicans-demand-assurances-before-us-eases-syria-sanctions",
+      "title": "134 House Republicans demand 'assurances' before US eases Syria sanctions",
+      "category": "politics",
+      "char_count": 292,
+      "word_count": 47,
+      "entity_score": 2
+    },
+    {
+      "text": "\"Under President Trump, the U.S. is rebuilding strength, restoring deterrence and proving America will not back down. President Trump and Republicans promised peace through strength. The FY26 NDAA delivers it,\" House Speaker Mike Johnson had said in a statement Dec. 7 on the new measures.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/trump-quietly-signs-sweeping-901b-defense-bill-bipartisan-senate-passage",
+      "title": "Trump quietly signs sweeping $901B defense bill after bipartisan Senate passage",
+      "category": "politics",
+      "char_count": 289,
+      "word_count": 45,
+      "entity_score": 2
+    },
+    {
+      "text": "Among the list of confirmed nominees are former Rep. Anthony D’Esposito, R-N.Y., to serve as inspector general at the Department of Labor and two picks for the National Labor Relations Board, James Murphy and Scott Mayer, along with several others in nearly every federal agency.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/trump-gets-417-nominees-confirmed-senate-surpassing-bidens-first-year-total-record-pace",
+      "title": "Trump gets 417 nominees confirmed by Senate in 2025, surpasses Biden's first-year total in record pace",
+      "category": "politics",
+      "char_count": 279,
+      "word_count": 45,
+      "entity_score": 3
+    },
+    {
+      "text": "The name change follows recent precedent, a Kennedy Center official told Fox News Digital, noting that the State Department’s decided earlier this month to add Trump’s name to the U.S. Institute of Peace and to past presidential administrations that have renamed military bases.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/maria-shriver-slams-trump-kennedy-center-name-change-decision-comprehension",
+      "title": "Maria Shriver slams Trump over Kennedy Center name change decision: 'Beyond comprehension'",
+      "category": "politics",
+      "char_count": 278,
+      "word_count": 43,
+      "entity_score": 3
+    },
+    {
+      "text": "When asked by a reporter if she thought she could defeat the 41-year-old, she replied: \"Listen, these polls, like three years out, are, you know, they are what they are. But let the record show: I would stomp him. I would stomp him!\"",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/aoc-predicts-triumph-jd-vance-hypothetical-2028-matchup-let-record-show-i-would-stomp-him",
+      "title": "AOC predicts triumph over JD Vance in hypothetical 2028 matchup: 'Let the record show: I would stomp him'",
+      "category": "politics",
+      "char_count": 233,
+      "word_count": 43,
+      "entity_score": 0
+    },
+    {
+      "text": "Additionally, it rolled out an America First Global Health Strategy in September to deliver health aid worldwide by working directly with recipient country’s governments instead of through non-governmental organizations and other aid programs.",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/rubio-unloads-alarmists-touts-state-dept-disaster-response-after-usaid-closure",
+      "title": "Rubio unloads on ‘alarmists,’ touts State Dept disaster response after USAID closure",
+      "category": "politics",
+      "char_count": 243,
+      "word_count": 33,
+      "entity_score": 4
+    },
+    {
+      "text": "President Donald Trump during a Mexican Border Defense medal presentation in the Oval Office of the White House in Washington, DC, on Monday, Dec. 15, 2025. Trump said he was classifying fentanyl as a \"weapon of mass destruction\" in his latest push to ratchet up pressure on Latin America over drug trafficking. (Bonnie Cash/UPI/Bloomberg via Getty Images)",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/politics/fox-news-politics-newsletter-senate-sends-901b-defense-bill-trump",
+      "title": "Fox News Politics Newsletter: Senate sends $901B defense bill to Trump",
+      "category": "politics",
+      "char_count": 356,
+      "word_count": 57,
+      "entity_score": 4
+    }
+  ]
+}
