@@ -68,10 +68,15 @@ run_comparison(data, output_path="results/comparison_table.csv")
 #### 2. Web Scraping
 
 ```bash
-python scraping/news_scraper.py
+python scraping/scrape_all.py
 ```
 
-This will scrape news articles and save 70+ paragraphs to `dataset2/raw_news.json`.
+This will scrape news articles from Fox News and Vice, 
+saving full articles to `dataset2/raw_articles.json` and paragraphs to `dataset2/raw_paragraphs.json`.
+
+**Scraping Architecture:**
+
+![Scraping Sequence Diagram](scraping/sequence_diagram.png)
 
 #### 3. Annotate Dataset2
 
@@ -90,7 +95,10 @@ annotate_dataset2(
 ```
 ner_nlp/
 ├── scraping/
-│   └── news_scraper.py          # Web scraping script
+│   ├── scrape_all.py            # Main scraping orchestrator
+│   ├── base_scraper.py          # Base scraper class
+│   ├── foxnews_scraper.py       # Fox News scraper
+│   └── vice_scraper.py          # Vice scraper
 ├── dataset2/
 │   └── final_annotated.json     # Required submission file
 ├── src/

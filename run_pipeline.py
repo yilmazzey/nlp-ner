@@ -12,7 +12,7 @@ sys.path.insert(0, project_root)
 
 from src.comparison import run_comparison
 from src.annotator import annotate_dataset2
-from scraping.news_scraper import main as scrape_news
+from scraping.scrape_all import main as scrape_news
 
 
 def main():

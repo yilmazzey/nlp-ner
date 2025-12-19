@@ -20,7 +20,7 @@ def load_config():
         return yaml.safe_load(f)
 
 
-def annotate_dataset2(input_path="dataset2/raw_news.json", 
+def annotate_dataset2(input_path="dataset2/raw_paragraphs.json", 
                      output_path="dataset2/final_annotated.json",
                      comparison_table_path="results/comparison_table.csv"):
     """
