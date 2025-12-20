@@ -193,3 +193,8 @@ class BaseNewsScraper(ABC):
         logger.info(f"[{self.source_name}] Successfully scraped {len(all_articles)} articles")
         return all_articles
 
+
+
+
+
+

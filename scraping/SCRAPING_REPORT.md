@@ -123,3 +123,8 @@ scraping/
 
 Successfully collected 424 paragraphs from 2 reliable sources (Fox News and Vice), exceeding the project requirement. The dataset is ready for annotation using the best-performing LLM and prompt combination from the evaluation phase.
 
+
+
+
+
+

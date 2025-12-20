@@ -1,3 +1,0 @@
-# NER Prompt Engineering Project
-
-
