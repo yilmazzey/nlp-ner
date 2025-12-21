@@ -66,3 +66,4 @@ if __name__ == "__main__":
     output_file = os.path.join(os.path.dirname(__file__), 'selected_140_ontonotes5_samples_no_misc.json')
     convert_misc_to_o(input_file, output_file)
 
+
