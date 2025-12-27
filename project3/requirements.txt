@@ -1,0 +1,7 @@
+datasets
+evaluate
+numpy
+regex
+scikit-learn
+torch
+transformers

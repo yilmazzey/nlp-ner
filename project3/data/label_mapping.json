@@ -1,0 +1,29 @@
+{
+  "label_list": [
+    "O",
+    "B-PERSON",
+    "I-PERSON",
+    "B-ORGANIZATION",
+    "I-ORGANIZATION",
+    "B-LOCATION",
+    "I-LOCATION",
+    "B-TIME",
+    "I-TIME",
+    "B-CURRENCY",
+    "I-CURRENCY"
+  ],
+  "label_to_id": {
+    "O": 0,
+    "B-PERSON": 1,
+    "I-PERSON": 2,
+    "B-ORGANIZATION": 3,
+    "I-ORGANIZATION": 4,
+    "B-LOCATION": 5,
+    "I-LOCATION": 6,
+    "B-TIME": 7,
+    "I-TIME": 8,
+    "B-CURRENCY": 9,
+    "I-CURRENCY": 10
+  },
+  "num_labels": 11
+}
